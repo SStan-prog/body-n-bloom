@@ -1,0 +1,40 @@
+---
+const { bg, heading } = Astro.props;
+---
+
+<header class="header" style={`background-image:url('${bg}')`}>
+  <div class="header__container">
+    <h1 class="header__heading">{heading}</h1>
+  </div>
+</header>
+
+<style lang="scss">
+  .header {
+    padding: 12.5rem;
+    background-size: cover;
+
+    @media (max-width: 900px) {
+      padding: 10rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: 7.55rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 5rem 2rem;
+    }
+
+    &__heading {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      color: var(--color-white);
+      text-shadow: var(--header-text-shadow);
+      text-align: center;
+
+      @media (max-width: 600px) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+</style>

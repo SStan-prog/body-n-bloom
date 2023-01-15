@@ -1,0 +1,212 @@
+---
+import '../../styles/styles.scss';
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <span class="column__heading">Contact</span>
+        <ul class="column__list">
+          <li class="column__list-item icon-container">
+            <img src="/icons/pin.svg" alt="location" />
+            <p>2785 Baseline Rd. Suite #209 Ottawa, ON, K2H 0B7</p>
+          </li>
+          <li class="column__list-item icon-container">
+            <img src="/icons/mail.svg" alt="email" />
+            <a href="mailto:ilona.pap@bodynbloom.ca">ilona.pap@bodynbloom.ca</a>
+          </li>
+          <li class="column__list-item icon-container">
+            <img src="/icons/call.svg" alt="phone number" />
+            <a href="tel:6139007148">613-900-7148</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <span class="column__heading">Treatments</span>
+        <ul class="column__list">
+          <li class="column__list-item">
+            <a href="/treatments/laser-hair-removal/"
+              >Hair Removal For All Skin Types</a
+            >
+          </li>
+          <li class="column__list-item">
+            <a href="/spider-veins">Spider Veins</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/sun-spot-damage">Sun Spot Damage</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/wrinkles-reduction-ottawa">Laser Wrinkle Treatment</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/nail-fungus">Nail Fungus</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/green-peel">Green Peel</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/acne-scar-removal-ottawa">Acne Scar</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/platelet-rich-plasma-treatments"
+              >Platelet-Rich Plasma Treatments</a
+            >
+          </li>
+          <li class="column__list-item">
+            <a href="/mesotherapy">Mesotherapy</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/stretch-marks">Stretch Marks</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/bridal-party-facial-packages"
+              >Bridal Party Facial Packages</a
+            >
+          </li>
+          <li class="column__list-item">
+            <a href="/weight-loss-diet">Weight Loss Diet</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/hydrafacial">Hydrafacial</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <span class="column__heading">Quick Links</span>
+        <ul class="column__list">
+          <li class="column__list-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/about-ilona-pap">About Body'N'Bloom</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/frequently-asked-questions">FAQs</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/referral-program">Referral Program</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/pricing">Pricing</a>
+          </li>
+          <li class="column__list-item">
+            <a href="https://bodynbloom.janeapp.com/" target="_blank"
+              >Book Online</a
+            >
+          </li>
+          <li class="column__list-item">
+            <a href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <span class="column__heading">Open hours</span>
+        <ul class="column__list">
+          <li class="column__list-item">M-F: 9:00 am - 9:00 pm</li>
+          <li class="column__list-item">Sat: 10:00 am - 5:00 pm</li>
+          <li class="column__list-item">Sun: 10:00 am - 5:00 pm</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Body 'N' Bloom <span id="year"></span>.</p>
+  </div>
+</footer>
+
+<script>
+  const year = document.getElementById('year');
+  year!.innerHTML = String(new Date().getFullYear());
+</script>
+
+<style lang="scss">
+  .footer {
+    background-color: var(--color-green-dark);
+  }
+
+  .container {
+    padding: 5rem 10rem;
+    color: var(--color-white);
+    max-width: 192rem;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+      padding: 5rem;
+    }
+
+    @media (max-width: 400px) {
+      padding: 5rem 2rem;
+    }
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5rem;
+
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .column {
+    &__heading {
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      font-weight: bold;
+
+      font-size: 2rem;
+    }
+
+    &__list {
+      margin-top: 2rem;
+      list-style: none;
+      font-size: 1.8rem;
+      font-weight: 500;
+
+      &-item {
+        margin: 1rem 0;
+      }
+
+      a {
+        color: var(--color-white);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .icon-container {
+    display: flex;
+
+    gap: 1rem;
+    align-items: center;
+
+    & img {
+      width: 3rem;
+    }
+  }
+
+  .copyright {
+    background-color: var(--color-off-white);
+    padding: 2.5rem;
+    font-size: 1.6rem;
+
+    color: #757575;
+
+    display: flex;
+    justify-content: center;
+
+    & span {
+    }
+  }
+</style>
