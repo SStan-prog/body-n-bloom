@@ -6,7 +6,7 @@ const { text, href, blank } = Astro.props;
   {text}
 </a>
 
-<style>
+<style lang="scss">
   .btn {
     background-color: var(--color-blue);
     color: var(--color-white);
@@ -21,5 +21,11 @@ const { text, href, blank } = Astro.props;
 
     text-decoration: none;
     font-size: 18px;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-blue-dark);
+    }
   }
 </style>

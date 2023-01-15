@@ -2,7 +2,10 @@
 const { bg, heading } = Astro.props;
 ---
 
-<header class="header" style={`background-image:url('${bg}')`}>
+<header
+  class="header"
+  style={` background-image:linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.2 )), url('${bg}')`}
+>
   <div class="header__container">
     <h1 class="header__heading">{heading}</h1>
   </div>
@@ -10,7 +13,7 @@ const { bg, heading } = Astro.props;
 
 <style lang="scss">
   .header {
-    padding: 12.5rem;
+    padding: 15rem;
     background-size: cover;
 
     @media (max-width: 900px) {
@@ -18,7 +21,7 @@ const { bg, heading } = Astro.props;
     }
 
     @media (max-width: 600px) {
-      padding: 7.55rem;
+      padding: 7.5rem;
     }
 
     @media (max-width: 450px) {
@@ -27,13 +30,14 @@ const { bg, heading } = Astro.props;
 
     &__heading {
       font-family: var(--font-heading);
-      font-size: 4rem;
+      font-size: 5rem;
       color: var(--color-white);
       text-shadow: var(--header-text-shadow);
       text-align: center;
+      text-transform: uppercase;
 
       @media (max-width: 600px) {
-        font-size: 2.4rem;
+        font-size: 3rem;
       }
     }
   }

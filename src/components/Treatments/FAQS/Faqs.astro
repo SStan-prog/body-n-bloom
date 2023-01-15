@@ -1,0 +1,97 @@
+---
+import Question from './Question.svelte';
+---
+
+<section class="section">
+  <div class="container">
+    <Question
+      client:load
+      question={'1. What is laser therapy and how does it work?'}
+      answer={'The laser creates a beam of high-intensity light that penetrates deeply into the skin tissue, where it delivers a controlled amount of targeted therapeutic heat. Candela’s patented Dynamic Cooling Device (DCD) technology protects the superficial layerss of the skin with a cool burst of cryogen before the laser energy penetrates the skin. Together, the long-pulse laser and the DCD cooling offers optimal treatment with minimal side effects.'}
+    />
+    <Question
+      client:load
+      question={'2. What will my treatment be like?'}
+      answer={'You and your practitioner will wear safety glasses to protect your eyes during the procedure. The practitioner will use a small hand- piece that touches your skin to deliver the light.'}
+    />
+
+    <Question
+      client:load
+      question={'3. In case of Laser Hair removal, vascular or pigmented lesions, how long will my treatment take, and how many treatments will I need?'}
+      answer={'The number of sessions depends on the treatment required and the condition of the Skin. For hair removal, multiple treatments are required, as the process is most effective when the hair is in its active growth phase. Other conditions may clear up with only one treatment, but many factors impact the efficacy of individual laser treatments, including the severity of the condition being treated.'}
+    />
+
+    <Question
+      client:load
+      question={'4. What precautions should I take before or after my Hair Removal treatment?'}
+      answer={'Patients scheduled for hair removal should avoid plucking, electrolysis or hair waxing for six weeks prior to treatment. If there is a history of Herpes Simplex Virus (HSV), prophylactic treatment antiviral therapy may be prescribed. The intended treatment area should not be exposed to sunlight or to tanning booth light prior to or immediately after treatment. Before laser treatment, prevention of sun exposure and use of a Sunblock with at least SPF 30 is recommended for the treatment area.'}
+    />
+
+    <Question
+      client:load
+      question={'5. Are laser treatments safe?'}
+      answer={'Yes, laser treatments have been used for many years for a variety of medical and cosmetic procedures. Candela, the most trusted name in the industry, has pioneered the development of some of the safest and most effective technologies and products available on the market today.'}
+    />
+
+    <Question
+      client:load
+      question={'6. Are there any adverse side effects to laser treatments?'}
+      answer={'In general, most procedures have a low risk of adverse side effects. Side effects include redness, swelling, hyperpigmentation, hypopigmentation, blistering and purpura (laser bruise) in the treated area. These usually do not last more than a few days. Permanent side effects are rare.'}
+    />
+
+    <Question
+      client:load
+      question={'7. Are treatments covered by insurance?'}
+      answer={'Most insurance companies do not offer reimbursement for cosmetic procedures such as tattoo removal or laser hair removal, vascular and pigmented lesions.'}
+    />
+
+    <Question
+      client:load
+      question={'8. What do customer say?'}
+      answer={'Our customers highly value the professional, caring service and state-of-the-art equipment.'}
+    />
+
+    <Question
+      client:load
+      question={'9. Is a HydraFacial right for my skin?'}
+      answer={'The HydraFacial is very versatile and can be customized for all skin types and to treat your unique skin conditions and needs.'}
+    />
+
+    <Question
+      client:load
+      question={'10. I am on medication/skin creams for my skin condition. Can I still have a HydraFacial?'}
+      answer={'Yes. You can have a HydraFacial even if you are taking medication or following a special skin-care routine. The HydraFacial first step is to clean and exfoliate old, dead skin cells. Thisenhance the effect of the creams and medication.The HydraFacial also infuses your skin with hydrating serums. This adds moisture and relieves the dryness caused by some creams and medications.'}
+    />
+
+    <Question
+      client:load
+      question={'11. Can the Hydrafacial get rid of all my wrinkles?'}
+      answer={'The HydraFacial effectively exfoliates and deeply hydrates your skin. It also infuses your skin with nourishing serums. These effects, combined, will help to eliminate fine lines and wrinkles and leave you with plump, hydrated skin.For deeper lines and wrinkles, we recommend other treatments, such as sublativetreatementby Syneron-Candela.'}
+    />
+
+    <Question
+      client:load
+      question={'12. How many treatments will I need?'}
+      answer={'Although your skin will be glowing and radiant after your first HydraFacial, we recommend a few sessions for more lasting results.You can also have a HydraFacial just before a special occasion for radiant, glowing skin.'}
+    />
+
+    <Question
+      client:load
+      question={'13. Is there any downtime or pain involved? How long does the treatment take?'}
+      answer={'That’s why HydraFacial is a fast, efficient treatment that takes approximately 60 minutes. You may put on make-up and return to your normal activities right after the treatment since there is no downtime.'}
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    padding: 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2rem;
+    }
+  }
+</style>

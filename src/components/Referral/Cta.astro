@@ -1,0 +1,33 @@
+---
+import Button from '../Buttons/Button.astro';
+---
+
+<section class="cta">
+  <h2>Book your free consultation today.</h2>
+  <Button text={'Book Now'} href={'https://bodynbloom.janeapp.com/'} />
+</section>
+
+<style lang="scss">
+  .cta {
+    padding: 5rem;
+    background-color: #68a13a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2rem;
+    }
+
+    & h2 {
+      font-size: 4rem;
+      text-align: center;
+      color: var(--color-white);
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+  }
+</style>

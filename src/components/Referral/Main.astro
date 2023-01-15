@@ -1,0 +1,102 @@
+<section class="section">
+  <div class="container">
+    <h2 class="heading">Reward</h2>
+    <div class="columns">
+      <div class="column">
+        <p class="subheading">
+          <strong>How can you benefit from our referral program?</strong>
+        </p>
+        <p>
+          TELL YOUR FRIENDS ABOUT US!! This is a great way to get your friends
+          and family to discover various treatments we offer at our clinic.
+        </p>
+      </div>
+
+      <div class="column">
+        <ul>
+          <li>
+            <span>
+              Every time you recommend our clinic to any of your friends or
+              family member and they book a treatment with us, you will receive
+              a small gift at your next treatment.
+            </span>
+          </li>
+          <li>
+            <span>
+              When you accumulate 5 referrals that you have sent to us and they
+              have all booked treatments, you will receive a FREE Facial
+              Treatment with Collagen Replenishing Mask.
+            </span>
+          </li>
+          <li>
+            <span>
+              Remember to make sure that whomever you refer to us mentions your
+              name at the time of their appointment.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    max-width: 120rem;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+      padding: 10rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: 7.5rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .heading {
+    font-size: 4rem;
+    font-family: var(--font-heading);
+    margin-bottom: 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  .subheading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    font-size: 1.6rem;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+
+    & li {
+      margin-bottom: 2rem;
+
+      & span {
+        position: relative;
+        left: 10px;
+      }
+
+      &::marker {
+        content: '»';
+        font-size: 2.4rem;
+        color: var(--color-green);
+      }
+    }
+  }
+</style>
