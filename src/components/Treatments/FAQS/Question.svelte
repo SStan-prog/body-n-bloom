@@ -24,7 +24,7 @@ export let answer;
     {/if}
 </div>
 
-<style>
+<style lang="scss"> 
 
     .question{
         max-width: 80rem;

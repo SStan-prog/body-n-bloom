@@ -1,0 +1,165 @@
+---
+import { Image } from '@astrojs/image/components';
+import Button from '../Buttons/Button.astro';
+import ButtonSmall from '../Buttons/Button-small.astro';
+---
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h2>Meet Ilona Pap</h2>
+        <p>
+          A native of Serbia, Ilona Pap obtained her Bachelor’s degree in
+          Pediatric Nursing in 1983. She then pursued and completed her
+          Bachelor’s degree in Chemical and Pharmaceutical Engineering at the
+          University of Novi Sad in 1991. After migrating to Canada with her
+          husband and starting a family, she spent the next decade raising her
+          two lovely boys.
+        </p>
+        <p>
+          In 2000, Ilona Pap decided to re-enter the workforce. In 2004, she
+          completed her Master’s degree in Chemical Engineering with a minor in
+          Statistics at the University of Ottawa. She obtained her Project
+          Management certification (PMP) among many other professional
+          certifications and worked for many years as a Project Manager. She has
+          also coordinated the new Project Management Graduate Certificate
+          Program at Algonquin College and has taught several courses there over
+          5 years.
+        </p>
+        <p>
+          Over the years, Ilona started to dream of owning her own business. She
+          was always passionate about health care, nutrition and beauty, so she
+          decided to combine these interests and venture into the field of
+          medical aesthetics. Ilona is a certified Laser Technician.
+        </p>
+        <p>
+          In 2014, Ilona moved onto an exciting new phase in her career by
+          enrolling into Nutrition Program and graduated with honours in October
+          2016. Her background in health care as well as engineering equips her
+          with a unique set of technical skills and knowledge that will serve
+          her clients well. In addition to her meticulous attention to detail
+          and professionalism, Ilona is a very warm, caring and engaging person,
+          with a quick smile and an easy laugh. Her aim is to work together with
+          her clients to achieve the beautiful and realistic outcome that they
+          desire.
+        </p>
+        <p>
+          To learn more about Body ‘N’ Bloom and our services, please visit our
+          treatments page. If you are a bride-to-be,visit our <a
+            href="/bridal-party-facial-packages"
+            >wedding page
+          </a>for information on packages.
+        </p>
+
+        <span>Ilona looks forward to seeing you soon!</span>
+        <div class="cta">
+          <Button
+            href="https://bodynbloom.janeapp.com/"
+            text="book your free consultation"
+            blank
+          />
+        </div>
+
+        <div class="cta-mobile">
+          <ButtonSmall
+            href="https://bodynbloom.janeapp.com/"
+            text="book your free consultation"
+            blank
+          />
+        </div>
+      </div>
+      <div class="column column-2">
+        <Image
+          src="/images/Ilona.jpg"
+          width="300"
+          aspectRatio="4/3"
+          format="webp"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 10rem;
+
+    @media (max-width: 900px) {
+      padding: 10rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: 7.5rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 10%;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+
+    @media (max-width: 600px) {
+      margin-bottom: 2rem;
+    }
+
+    & img {
+      margin-top: 8rem;
+      width: 100%;
+
+      @media (max-width: 900px) {
+        margin: 0 auto;
+        max-width: 40rem;
+      }
+    }
+
+    & h2 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    & p {
+      font-size: var(--font-size-body);
+      margin-bottom: 2rem;
+    }
+
+    & span {
+      margin-bottom: 5rem;
+    }
+
+    & .cta {
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    & .cta-mobile {
+      display: none;
+
+      @media (max-width: 600px) {
+        display: block;
+      }
+    }
+  }
+</style>

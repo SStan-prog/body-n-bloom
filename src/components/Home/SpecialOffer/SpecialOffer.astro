@@ -1,0 +1,94 @@
+---
+import Button from '../../Buttons/Button.astro';
+---
+
+<section
+  class=""
+  style="background-image:linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4 )), url('/images/common-header.jpg')"
+>
+  <div class="container">
+    <div class="heading">
+      <h2>Our Special Offer</h2>
+      <div class="heading__accent">
+        <div class="heading__accent-line"></div>
+        <img src="/icons/leaf-green.svg" alt="leaf" />
+        <div class="heading__accent-line"></div>
+      </div>
+    </div>
+    <p>
+      Body ‘N’ Bloom introduces an amazing new addition and offer this month.
+      Our new equipment will offer a unique combination of ablation and skin
+      resurfacing leading to wrinkle reduction, skin tightening and even lifting
+      with less downtime then traditional skin rejuvenating treatments. Collagen
+      Replenishing Mask included (reg. $35)
+    </p>
+    <Button
+      href="https://bodynbloom.ca/book-online/"
+      text="Make An Appointment"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  .section {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    padding: 10rem 5rem;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2rem;
+    }
+
+    & p {
+      color: var(--color-white);
+      font-size: 1.8rem;
+      max-width: 80rem;
+      text-align: center;
+
+      margin-bottom: 3rem;
+    }
+  }
+
+  .heading {
+    font-family: var(--font-heading);
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    & h2 {
+      font-size: 4rem;
+
+      text-transform: uppercase;
+      color: var(--color-white);
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    &__accent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      & img {
+        width: 3rem;
+      }
+
+      &-line {
+        height: 0.1rem;
+        width: 6rem;
+        background-color: var(--color-green);
+      }
+    }
+  }
+</style>

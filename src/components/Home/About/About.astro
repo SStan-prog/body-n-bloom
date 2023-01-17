@@ -1,0 +1,93 @@
+---
+import { Image } from '@astrojs/image/components';
+import Button from '../../Buttons/Button.astro';
+---
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <Image
+          src="/images/home/about.jpeg"
+          alt="A relaxing flower spa set"
+          class="object-contain h-auto"
+          width={600}
+          aspectRatio={16 / 9}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+      </div>
+      <div class="column">
+        <div class="column__text">
+          <h2>About Body ‘N’ Bloom</h2>
+          <p>
+            Body ‘N’ Bloom is one of the most highly recommended laser hair
+            removal and aesthetic treatment clinics in Ottawa.
+          </p>
+          <p>
+            Customers give rave reviews (link) about Ilona’s kind, caring and
+            professional demeanor, with her skilled and detailed approach.
+          </p>
+          <p>
+            Body ‘N’ Bloom uses state-of-the art equipment, making your
+            treatment virtually painless, and highly effective.
+          </p>
+          <p>Customers appreciate our competitive rates and honest approach.</p>
+        </div>
+
+        <Button text="Read more" href="/about" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    padding: 10rem 5rem;
+    max-width: 140rem;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+
+    @media (max-width: 1200px) {
+      gap: 5rem;
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+
+    & h2 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    & p {
+      font-size: var(--font-size-body);
+      margin-bottom: 2rem;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .column__text {
+    margin-bottom: 5rem;
+  }
+</style>
