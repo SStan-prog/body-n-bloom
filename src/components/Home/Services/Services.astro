@@ -1,0 +1,192 @@
+---
+import { Image } from '@astrojs/image/components';
+import Button from '../../Buttons/Button.astro';
+---
+
+<section>
+  <div class="container">
+    <div class="heading__container">
+      <div class="heading">
+        <h2>Our Services</h2>
+        <div class="heading__accent">
+          <div class="heading__accent-line"></div>
+          <img src="/icons/leaf.svg" alt="leaf" />
+          <div class="heading__accent-line"></div>
+        </div>
+      </div>
+      <p>
+        From the quality of the equipment to the laser technician credentials,
+        down to the smallest details of the office environment, it all plays a
+        role in finding a laser clinic you can trust.
+      </p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card__image">
+          <Image
+            src="/images/home/service-1.jpeg"
+            alt="A woman receiving a skin resurfacing."
+            width={250}
+            aspectRatio={1 / 1}
+            format="webp"
+            fit="cover"
+            position="center"
+            background="transparent"
+          />
+        </div>
+        <div class="card__text">
+          <h3 class="card__text-heading">Skin Resurfacing</h3>
+          <p class="card__text-body">
+            (HydraFacial, Microdermabrasion, Skin Tightening)
+          </p>
+          <Button text="Book Now" href="https://bodynbloom.janeapp.com/" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__image">
+          <Image
+            src="/images/home/service-2.jpeg"
+            alt="A woman receiving skin treatment for wrinkles and acne scars."
+            width={250}
+            aspectRatio={1 / 1}
+            format="webp"
+            fit="cover"
+            position="center"
+            background="transparent"
+          />
+        </div>
+        <div class="card__text">
+          <h3 class="card__text-heading">Skin Concerns</h3>
+          <p class="card__text-body">
+            (Wrinkles, Acne Scars, Stretch Marks, Rosacea)
+          </p>
+          <Button text="Book Now" href="https://bodynbloom.janeapp.com/" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__image">
+          <Image
+            src="/images/home/service-3.jpeg"
+            alt="A woman receiving laser hair removal."
+            width={250}
+            aspectRatio={1 / 1}
+            format="webp"
+            fit="cover"
+            position="center"
+            background="transparent"
+          />
+        </div>
+        <div class="card__text">
+          <h3 class="card__text-heading">Laser treatments</h3>
+          <p class="card__text-body">
+            (Hair Removal for all skin type, Nail Fungus Treatment, Spider Vein
+            Treatment)
+          </p>
+          <Button text="Book Now" href="https://bodynbloom.janeapp.com/" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    padding: 10rem 5rem;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2rem;
+    }
+
+    & p {
+      color: var(--color-black);
+      font-size: 1.8rem;
+      max-width: 80rem;
+      text-align: center;
+
+      margin-bottom: 3rem;
+    }
+  }
+
+  .heading {
+    font-family: var(--font-heading);
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    &__container {
+      margin-bottom: 5rem;
+    }
+
+    & h2 {
+      font-size: 4rem;
+
+      text-transform: uppercase;
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    &__accent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      & img {
+        width: 3rem;
+      }
+
+      &-line {
+        height: 0.1rem;
+        width: 6rem;
+        background-color: var(--color-blue);
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-white);
+    padding: 5rem 2rem;
+    max-width: 35rem;
+
+    box-shadow: var(--shadow-sm);
+    border-radius: 10px;
+
+    &__image {
+      & img {
+        border-radius: 999px;
+        border: solid 3px var(--color-blue);
+      }
+      margin-bottom: 2rem;
+    }
+
+    &__text {
+      &-heading {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+      }
+      &-body {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+</style>
