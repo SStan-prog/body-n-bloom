@@ -1,9 +1,20 @@
+<script>
+  import MobileMenu from './MobileMenu.svelte';
+
+  import { slide } from 'svelte/transition'
+      let openMenu = false
+    const toggle = ()=> {
+      openMenu = !openMenu
+
+    }
+</script>
+
 <nav class="nav">
   <div class="nav__top">
     <div class="nav__top-links">
       <div class="nav__top-links-item">
         <img src="/icons/call.svg" alt="phone number" />
-        <a href="tel:6135528504">6135528504</a>
+        <a href="tel:6135528504">613-552-8504</a>
       </div>
       <div class="nav__top-links-item">
         <img src="/icons/mail.svg" alt="email" />
@@ -30,26 +41,30 @@
         </div>
         <ul class="nav__main-list">
           <li class="nav__main-list-item">
-            <a href="">About Us</a>
+            <p >About Us</p>
             <ul class="nav__main-list-dropdown">
               <li class="nav__main-list-dropdown-item">
-                <a href="">FAQ</a>
+                <a href="/about">About</a>
                 
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="">Blog</a>
+                <a href="/frequently-asked-questions">FAQ</a>
+                
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="">Referral Program</a>
+                <a href="/blog">Blog</a>
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="">Contact</a>
+                <a href="/referral-program">Referral Program</a>
+              </li>
+              <li class="nav__main-list-dropdown-item">
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </li>
 
           <li class="nav__main-list-item">
-            <a href="">Treatments</a>
+            <p href="#">Treatments</p>
             <ul class="nav__main-list-dropdown">
               <li class="nav__main-list-dropdown-item">
                 <a href="/treatments/laser-hair-removal/">Laser hair removal</a>
@@ -82,7 +97,7 @@
                 <a href="/treatments/stretch-marks/">Stretch Marks</a>
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/bridal-party-facial-packages/">Bridal Party Facial Packages</a>
+                <a href="/bridal-party-facial-packages">Bridal Party Facial Packages</a>
               </li>
               <li class="nav__main-list-dropdown-item">
                 <a href="/treatments/weight-loss-diet/">Weight Loss Diet</a>
@@ -94,22 +109,32 @@
           </li>
 
           <li class="nav__main-list-item">
-            <a href="/treatments/bridal-party-facial-packages/">Wedding</a>
+            <a href="/bridal-party-facial-packages">Wedding</a>
           </li>
 
           <li class="nav__main-list-item">
-            <a href="">Pricing</a>
+            <a href="/pricing">Pricing</a>
           </li>
 
           <li>
             <a  href="https://bodynbloom.janeapp.com/" class="btn" target = "_blank" rel= "noreferrer ">Book Online</a>
           </li>
         </ul>
+        <button class="menu-btn" on:click={toggle}>
+              <div class={openMenu ? "active" : ""}></div>
+              <div class={openMenu  ? "active" : ""}></div>
+              <div class={openMenu  ? "active" : ""}></div>
+        </button>
   </div>
+  {#if openMenu}
+  <MobileMenu openMenu = {openMenu} />
+  {/if}
 </nav>
 
 <style lang="scss">
   .nav {
+    position: relative;
+
     &__main{
       padding: 1rem 5rem;
       background-color: var(--color-white);
@@ -118,6 +143,11 @@
       width: 100%;
       grid-template-columns: 30% 70%;
       align-items: center;
+
+      @media (max-width: 600px) {
+        padding: 1rem 2.5rem;
+    }
+
 
 
       &-logo-container{
@@ -262,6 +292,57 @@
     &:hover {
       background-color: var(--color-blue-dark);
       color: var(--color-white);
+    }
+  }
+
+  .menu-btn{
+    justify-self: flex-end;
+    width: min-content;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 2.5rem;
+
+    display: none;
+
+    @media (max-width: 900px) {
+        display: flex;
+      }
+
+    & div:first-child {
+      transform: rotate(0deg);
+    }
+
+    & .active:first-child {
+     transform: rotate(45deg);
+     opacity: 1;
+    }
+
+    & .active:last-child {
+     transform: rotate(-45deg);
+     opacity: 1;
+    }
+
+    & div{
+      transition: transform .3s ease, opacity .3s ease;
+      height: .4rem;
+      width: 3rem;
+      background-color: var(--color-black);
+
+      &.active{
+        opacity: 0;
+      }
+
+      &:first-child {
+        transform-origin: left center;
+      }
+
+      &:last-child{
+        transform-origin: left center;
+      }
     }
   }
 </style>

@@ -1,0 +1,44 @@
+---
+import Slider from './Slider.svelte';
+---
+
+<section
+  class="section"
+  style="background-image:linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4 )), url('/images/home/video-bg.jpeg')"
+>
+  <div class="container">
+    <h2 class="heading">How it works</h2>
+    <Slider client:idle />
+  </div>
+</section>
+
+<style lang="scss">
+  .section {
+    background-size: cover;
+  }
+
+  .container {
+    padding: 10rem 5rem;
+
+    @media (max-width: 500px) {
+      padding: 7.5rem 2rem;
+    }
+  }
+
+  .heading {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--color-white);
+
+    margin-bottom: 7.5rem;
+    font-size: 4rem;
+
+    text-transform: uppercase;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+
+      margin-bottom: 5rem;
+    }
+  }
+</style>

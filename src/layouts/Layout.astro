@@ -19,7 +19,7 @@ const { title } = Astro.props;
   </head>
   <body style="background: url('/images/body-bg.jpeg') repeat;">
     <div class="white-wrapper">
-      <Navbar />
+      <Navbar client:load />
       <slot />
       <Footer />
     </div>
@@ -70,7 +70,7 @@ const { title } = Astro.props;
     --font-size-body: 16px;
 
     //text shadow
-    --header-text-shadow: 2px 2px #000000;
+    --header-text-shadow: 2px 2px #2b2b2ba9;
 
     //box shadow
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -86,6 +86,10 @@ const { title } = Astro.props;
     color: var(--color-black);
     font-size: var(--font-size-body);
     font-family: arial;
+  }
+
+  p {
+    font-weight: bold;
   }
 
   a {
@@ -109,10 +113,30 @@ const { title } = Astro.props;
   .swiper-pagination-bullet {
     padding: 1rem;
     border: solid 0.3rem;
+    opacity: 0.6 !important;
   }
 
   .swiper-pagination-bullet-active {
     background-color: #fff !important;
     border: solid 0.3rem var(--color-blue);
+    opacity: 1 !important;
+  }
+
+  .home-videos-slider {
+    .swiper {
+      padding-bottom: 7.5rem;
+    }
+    .swiper-pagination {
+      bottom: 0 !important;
+    }
+  }
+
+  .home-testimonials-slider {
+    .swiper {
+      padding-bottom: 5rem;
+    }
+    .swiper-pagination {
+      bottom: 0 !important;
+    }
   }
 </style>
