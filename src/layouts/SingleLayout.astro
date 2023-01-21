@@ -74,12 +74,6 @@ const { title } = Astro.props;
 
     //box shadow
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-
-    //breakpoints
-    $phonesmall: 450px;
-    $phone: 450px;
-    $tabport: 450px;
-    $tabland: 450px;
   }
 
   body {
@@ -100,43 +94,18 @@ const { title } = Astro.props;
     }
   }
 
-  /* SWIPER STYLES */
-
-  .swiper-slide {
-    height: auto !important;
-  }
-
-  .swiper-pagination-bullet {
-    padding: 1rem;
-    border: solid 0.3rem;
-    opacity: 0.6 !important;
+  p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 600px) {
-      padding: 0.5rem;
+      font-size: 1.6rem;
     }
-  }
 
-  .swiper-pagination-bullet-active {
-    background-color: #fff !important;
-    border: solid 0.3rem var(--color-blue);
-    opacity: 1 !important;
-  }
-
-  .home-videos-slider {
-    .swiper {
-      padding-bottom: 7.5rem;
-    }
-    .swiper-pagination {
-      bottom: 0 !important;
-    }
-  }
-
-  .home-testimonials-slider {
-    .swiper {
-      padding-bottom: 5rem;
-    }
-    .swiper-pagination {
-      bottom: 0 !important;
+    & ul {
+      & li {
+        margin: 1rem 0;
+      }
     }
   }
 </style>

@@ -1,0 +1,57 @@
+---
+import { Image } from '@astrojs/image/components';
+const { post } = Astro.props;
+console.log(post);
+---
+
+<div class="container">
+  <article class="article">
+    <h1 class="heading">{post.title}</h1>
+    {
+      post.featuredImage ? (
+        <Image
+          src={post.featuredImage.node.sourceUrl}
+          alt={post.featuredImage.node.altText}
+          width={800}
+          aspectRatio={5 / 3}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+      ) : null
+    }
+    <div class="" set:html={post.content} />
+  </article>
+</div>
+
+<style lang="scss">
+  .container {
+    max-width: 85rem;
+    margin: 0 auto;
+
+    padding: 10rem 2.5rem;
+
+    @media (max-width: 600px) {
+      padding: 5rem 2.5rem;
+    }
+  }
+
+  .article {
+    & img {
+      margin-bottom: 2rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-heading);
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+</style>

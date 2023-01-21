@@ -1,0 +1,105 @@
+---
+import { Image } from '@astrojs/image/components';
+import ButtonAltSmall from '../Buttons/Button-alt-small.astro';
+const { posts } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="cards">
+      {
+        posts.map((post: any) => {
+          return (
+            <a href={`/blog/${post.slug}`}>
+              <article class="card">
+                {post.featuredImage ? (
+                  <Image
+                    src={post.featuredImage.node.sourceUrl}
+                    alt={post.featuredImage.node.altText}
+                    width={400}
+                    aspectRatio={5 / 3}
+                    format="webp"
+                    fit="cover"
+                    position="center"
+                    background="transparent"
+                  />
+                ) : null}
+                <div class="card__text">
+                  <h2 class="card__text-heading">{post.title}</h2>
+                  <div
+                    class="card__text-excerpt"
+                    set:html={post.excerpt.substring(0, 100) + '...'}
+                    style="font-weight: 400;"
+                  />
+                  <ButtonAltSmall text="Read full article" />
+                </div>
+              </article>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 5rem 2.5rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem 5rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    @media (max-width: 600px) {
+      gap: 5rem;
+    }
+  }
+
+  .card {
+    max-width: 40rem;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    border-radius: 20px;
+
+    @media (max-width: 600px) {
+      max-width: 28rem;
+    }
+
+    &__text {
+      padding: 2rem;
+      color: var(--color-black);
+
+      &-heading {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      &-excerpt {
+        margin-bottom: 2rem;
+
+        & p {
+          font-weight: 400;
+        }
+      }
+    }
+
+    & img {
+      border-radius: 20px 20px 0 0;
+
+      @media (max-width: 600px) {
+        max-width: 28rem;
+        height: auto;
+      }
+    }
+  }
+</style>

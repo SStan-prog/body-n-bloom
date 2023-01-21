@@ -52,7 +52,7 @@
                 
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="/blog">Blog</a>
+                <a href="/blog">Blogs</a>
               </li>
               <li class="nav__main-list-dropdown-item">
                 <a href="/referral-program">Referral Program</a>

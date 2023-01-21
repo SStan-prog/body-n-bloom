@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { blogPageQuery } from '../../queries/api';
+import Header from '../../components/Common/Header.astro';
+import Archive from '../../components/Blog/Archive.astro';
+
+const data = await blogPageQuery();
+---
+
+<Layout title="Blog">
+  <Header heading="Our blog" bg="/images/blog-header.jpeg" />
+  <Archive posts={data.posts.nodes} />
+</Layout>
