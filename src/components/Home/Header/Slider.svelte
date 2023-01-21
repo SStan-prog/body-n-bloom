@@ -1,4 +1,6 @@
 <script>
+ 
+
     // Import Swiper Svelte components
     import { Swiper, SwiperSlide } from 'swiper/svelte';
 
@@ -55,6 +57,7 @@
 
 .slide-1{
     background-image: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.2 )), url('/images/home/slider-1.jpg');
+    background-position: 50% 70%;
 }
 
 .slide-2{

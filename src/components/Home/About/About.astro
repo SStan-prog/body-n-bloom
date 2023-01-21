@@ -10,7 +10,7 @@ import Button from '../../Buttons/Button.astro';
         <Image
           src="/images/home/about.jpeg"
           alt="A relaxing flower spa set"
-          width={600}
+          width={500}
           aspectRatio={16 / 9}
           format="webp"
           fit="cover"
@@ -56,7 +56,7 @@ import Button from '../../Buttons/Button.astro';
   .columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    gap: 5rem;
 
     @media (max-width: 1200px) {
       gap: 5rem;
@@ -82,6 +82,7 @@ import Button from '../../Buttons/Button.astro';
 
     & img {
       width: 100%;
+      max-width: 50rem;
       height: auto;
     }
   }
