@@ -1,13 +1,74 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/MainWithSlider/Main.astro';
 import Guidelines from '../../components/Treatments/Guidelines.astro';
 
-import bg from '../../../public/treatments/laser-hair-removal-header.jpg';
+import slider1 from '../../../public/images/treatments/laser-hair-removal/slider-1.jpeg';
+import slider2 from '../../../public/images/treatments/laser-hair-removal/slider-2.jpeg';
+import slider3 from '../../../public/images/treatments/laser-hair-removal/slider-3.jpeg';
+import slider4 from '../../../public/images/treatments/laser-hair-removal/slider-4.jpeg';
+import slider5 from '../../../public/images/treatments/laser-hair-removal/slider-5.jpeg';
+import slider6 from '../../../public/images/treatments/laser-hair-removal/slider-6.jpeg';
+import slider7 from '../../../public/images/treatments/laser-hair-removal/slider-7.jpeg';
+import slider8 from '../../../public/images/treatments/laser-hair-removal/slider-8.jpeg';
+import slider9 from '../../../public/images/treatments/laser-hair-removal/slider-9.jpg';
+
+let images = [
+  slider1,
+  slider2,
+  slider3,
+  slider4,
+  slider5,
+  slider6,
+  slider7,
+  slider8,
+  slider9,
+];
+
+let altText = 'A before and after pic of laser hair removal';
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header heading="LASER HAIR REMOVAL" bg={bg} />
+  <Header
+    heading="LASER HAIR REMOVAL"
+    bg="images/treatments/laser-hair-removal/laser-hair-removal-header.jpg"
+  />
+  <Main images={images} altText={altText}>
+    <div slot="text">
+      <div class="text-container">
+        <h2>Laser Hair Removal Ottawa</h2>
+        <p>
+          Ottawa is a growing city with an ethnically diverse population. The
+          medical laser hair removal technology from <a
+            href="https://candelamedical.com/"
+            target="_blank"
+            rel="noreferrer">Syneron Candela</a
+          > is the fastest, safest, and most efficient hair removal device ever developed.
+          Effective for All skin types and both men and women equally.
+        </p>
+        <p>
+          Our machines uses a dynamic cooling device, whereby a small burst of
+          coolant spray is dispersed milliseconds before and after the laser
+          pulse. This minimizes the discomfort of the treatment and provides
+          clients with a cooling sensation making the treatment very
+          comfortable.
+        </p>
+        <p>
+          To learn more about Body ‘N’ Bloom’s laser hair removal treatments in
+          Ottawa, call <a href="tel:6135228504">613-522-8504</a> or <a
+            href="https://bodynbloom.janeapp.com/"
+            target="_blank"
+            rel="noreferrer">book an appointment online</a
+          >.
+        </p>
+        <p>
+          Continue reading to learn about pre-and-post laser hair removal
+          treatments.
+        </p>
+      </div>
+    </div>
+  </Main>
   <Guidelines heading="PRE AND POST TREATMENT GUIDELINES">
     <ol slot="pre-treatment">
       <li class="guidelines__list-item">
@@ -65,8 +126,21 @@ import bg from '../../../public/treatments/laser-hair-removal-header.jpg';
   </Guidelines>
 </Layout>
 
-<style>
+<style lang="scss">
   li {
     margin: 2rem 0rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
   }
 </style>

@@ -114,6 +114,10 @@ const { title } = Astro.props;
     padding: 1rem;
     border: solid 0.3rem;
     opacity: 0.6 !important;
+
+    @media (max-width: 600px) {
+      padding: 0.5rem;
+    }
   }
 
   .swiper-pagination-bullet-active {

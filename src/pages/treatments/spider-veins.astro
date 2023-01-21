@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/MainWithSlider/Main.astro';
+import Guidelines from '../../components/Treatments/Guidelines.astro';
+
+import slider1 from '../../../public/images/treatments/spider-veins/slider-1.jpg';
+import slider2 from '../../../public/images/treatments/spider-veins/slider-2.jpg';
+import slider3 from '../../../public/images/treatments/spider-veins/slider-3.jpg';
+import slider4 from '../../../public/images/treatments/spider-veins/slider-4.jpg';
+
+let images = [slider1, slider2, slider3, slider4];
+
+let altText = 'A before and after pic of spider vein removal';
+---
+
+<Layout title="Welcome to Astro.">
+  <Header
+    heading="Sider veins"
+    bg="images/treatments/spider-veins/spider-veins-header.jpg"
+  />
+  <Main images={images} altText={altText}>
+    <div slot="text">
+      <div class="text-container">
+        <h2>Spider Vein Treatment Ottawa</h2>
+        <p>
+          Spider veins are common and can occur anywhere on the body, including
+          the face and legs. Generally, spider veins occur when tiny blood
+          vessels connect together and cause redness and elevated red blotches
+          close to the surface of the skin.
+        </p>
+        <h3>What causes Spider Veins?</h3>
+        <ul>
+          <li>hormonal changes</li>
+          <li>exposure to the sun</li>
+          <li>injuries</li>
+          <li>hereditary</li>
+        </ul>
+        <h3>How to Treat Spider Veins?</h3>
+        <p>
+          Unfortunately, most medications and creams do not help eliminate
+          spider veins. Body ‘N’ Bloom uses advanced laser treatments to
+          eliminate these small veins.
+        </p>
+        <p>
+          Call <a href="tel:6135228504">613-522-8504</a> or <a
+            href="https://bodynbloom.janeapp.com/"
+            target="_blank"
+            rel="noreferrer">book an appointment online</a
+          > to assess and treat spider veins.
+        </p>
+      </div>
+    </div>
+  </Main>
+  <Guidelines heading="PRE AND POST TREATMENT GUIDELINES">
+    <ol slot="pre-treatment">
+      <li class="guidelines__list-item">The skin must be clean and dry.</li>
+      <li>
+        Direct sun exposure and tanning MUST be avoided for one to two weeks
+        prior to treatment.
+      </li>
+    </ol>
+    <ol slot="post-treatment">
+      <li>
+        A cool compress can be applied to the treatment area to provide comfort.
+      </li>
+      <li>
+        Must use a sunblock with at least SPF 30 or more to protect the treated
+        area.
+      </li>
+      <li>
+        Avoid exercising or strenuous activity for three to five days to prevent
+        "flushing".
+      </li>
+      <li>
+        Avoid certain environments, such as hot showers, steam rooms, saunas,
+        hot tubs, etc., for several days following treatment.
+      </li>
+      <li>
+        Limit or forego the intake of alcoholic beverages for several days
+        following treatment, as alcohol consumption can cause vasodilation.
+      </li>
+      <li>
+        Use if possible a compression or support for several days following the
+        treatment.
+      </li>
+    </ol>
+  </Guidelines>
+</Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>

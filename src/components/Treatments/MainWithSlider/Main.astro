@@ -1,0 +1,49 @@
+---
+import Slider from './Slider.svelte';
+
+const { images, altText } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="text-container">
+      <slot name="text" />
+    </div>
+    <div class="slider-container">
+      <Slider client:idle images={images} altText={altText} />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    padding: 10rem 10rem 5rem;
+
+    max-width: 192rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+
+    @media (max-width: 1200px) {
+      gap: 5rem;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 900px) {
+      padding: 5rem;
+    }
+
+    @media (max-width: 400px) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .text-container {
+    width: 100%;
+  }
+</style>
