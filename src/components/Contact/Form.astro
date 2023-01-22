@@ -1,0 +1,157 @@
+<!-- The boilerform namespace -->
+<form class="boilerform" name="contact" method="POST" data-netlify="true">
+  <fieldset class="form">
+    <div class="form__row">
+      <label for="name" class="label">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="input-field"
+        value=""
+        autocorrect="off"
+        required
+      />
+    </div>
+    <div class="form__row">
+      <label for="phone" class="label">Phone</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        autocapitalize="none"
+        autocorrect="off"
+        class="input-field"
+        required
+      />
+    </div>
+    <div class="form__row">
+      <label for="email" class="label">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        autocapitalize="none"
+        autocorrect="off"
+        class="input-field"
+        required
+      />
+    </div>
+    <div class="form__row">
+      <label for="email" class="label">Treatments</label>
+      <select
+        name="email"
+        id="email"
+        autocapitalize="none"
+        autocorrect="off"
+        class="input-field"
+        required
+      >
+        <option value="Hair removal">Hair removal</option>
+        <option value="Vascular Lesions">Vascular Lesions</option>
+        <option value="Pigmented Lesions">Pigmented Lesions</option>
+        <option value="Laser Wrinkle Treatment">Laser Wrinkle Treatment</option>
+        <option value="Nail Fungus">Nail Fungus</option>
+        <option value="Nutritional Consultation"
+          >Nutritional Consultation</option
+        >
+        <option value="Acne Scar Removal">Acne Scar Removal</option>
+        <option value="Stretch Marks">Stretch Marks</option>
+        <option value="Free Consultation">Free Consultation</option>
+        <option value="Hydrafacial">Hydrafacial</option>
+      </select>
+    </div>
+    <div class="form__row">
+      <label for="email" class="label">Preferable way of contact</label>
+      <select
+        name="email"
+        id="email"
+        autocapitalize="none"
+        autocorrect="off"
+        class="input-field"
+        required
+      >
+        <option value="Text">Text</option>
+        <option value="Phone">Phone</option>
+        <option value="Email">Email</option>
+      </select>
+    </div>
+    <div class="form__row">
+      <label for="message" class="label">Your message</label>
+      <textarea
+        name="message"
+        id="message"
+        class="input-field input-field--multiline"
+        rows="5"></textarea>
+    </div>
+    <div class="form__row">
+      <button class="btn" type="submit">Send</button>
+    </div>
+  </fieldset>
+</form>
+
+<style lang="scss">
+  // Form component
+  .form {
+    display: block;
+    border: none;
+
+    max-width: 40rem;
+    margin: 0 auto;
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      & label {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      & input,
+      select,
+      textarea {
+        padding: 0.8rem;
+        font-size: 1.6rem;
+
+        border: solid 0.2rem var(--color-off-white);
+        border-radius: 0.3rem;
+
+        &:active {
+          border: solid 0.2rem var(--color-blue);
+        }
+      }
+    }
+
+    & textarea {
+      resize: vertical;
+      font-family: var(--font-body);
+    }
+  }
+
+  .btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem 3rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 18px;
+
+    transition: background-color 0.3s ease;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &:hover {
+      background-color: var(--color-blue-dark);
+      color: var(--color-white);
+    }
+  }
+</style>

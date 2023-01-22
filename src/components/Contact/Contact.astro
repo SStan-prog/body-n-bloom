@@ -1,0 +1,94 @@
+---
+import Form from './Form.astro';
+import Map from './Map.astro';
+import Bottom from './Bottom.astro';
+---
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2>Get In Touch</h2>
+      <div class="heading__accent">
+        <div class="heading__accent-line"></div>
+        <img src="/icons/leaf.svg" alt="leaf" />
+        <div class="heading__accent-line"></div>
+      </div>
+      <p class="heading__body">
+        We’d really love to hear from you so why not drop us an email and we’ll
+        get back to you as soon as we can.
+      </p>
+    </div>
+    <div class="main">
+      <Form />
+      <Map />
+      <Bottom />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .section {
+  }
+  .container {
+    padding: 5rem 10rem 0;
+
+    max-width: 192rem;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+      padding: 5rem 5rem 0rem;
+    }
+
+    @media (max-width: 400px) {
+      padding: 5rem 2rem 0rem;
+    }
+  }
+  .heading {
+    font-family: var(--font-heading);
+    text-align: center;
+
+    margin-bottom: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &__accent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      & img {
+        width: 3rem;
+      }
+
+      &-line {
+        height: 0.1rem;
+        width: 6rem;
+        background-color: var(--color-blue);
+      }
+    }
+
+    &__body {
+      text-align: center;
+      font-size: 2rem;
+      max-width: 67rem;
+    }
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 10rem;
+    }
+  }
+</style>
