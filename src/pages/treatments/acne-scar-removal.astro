@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/MainNoSlider/Main.astro';
+import Guidelines from '../../components/Treatments/Guidelines.astro';
+
+import image from '../../../public/images/treatments/acne-scar-removal/acne-scar-removal.jpeg';
+
+let altText = 'A before and after pic of sun spot damage repair.';
+---
+
+<Layout title="Acne Scar Removal">
+  <Header
+    heading="Acne Scar Removal"
+    bg="images/treatments/spider-veins/spider-veins-header.jpg"
+  />
+  <Main image={image} altText={altText}>
+    <div slot="text">
+      <div class="text-container">
+        <h2>Acne Scar Removal Ottawa</h2>
+        <p>
+          At Body ‘N’ Bloom we use two types of treatments for acne scar
+          removal:
+        </p>
+
+        <p>
+          Blue light – which works safely and effectively, clearing up existing
+          blemishes, and preventing future breakouts before they happen.
+          Phototherapy can increase circulation, accelerate tissue repair, kill
+          bacteria, and decrease inflammation. Most people require 2-10
+          treatments to obtain results. Treatments are usually performed 1-2
+          times per week for 30 min.
+        </p>
+        <p>
+          Sublative – Very effective treatment for Acne Scar where fractional
+          energy is delivered to the skin with minimal epidermal disruption,
+          where it can produce a significant increase in both collagen and
+          elastin. This treatment is safe and effective for ALL Skin Types,
+          providing visible results and low downtime. The number of treatments
+          varies, it is usually between 3-5 treatments spaced approximately 4
+          weeks apart.
+        </p>
+
+        <p>
+          <strong style="font-size: 2.4rem">What Causes Acne?</strong><br />
+          Face, chest and back acne have the same root causes – a combination of
+          dead skin cells, oil produced by the skin (called sebum), and bacteria
+          called Propionibacterium acnes (P. acne). When P. acne bacteria builds
+          up in pores, skin becomes inflamed, leading to form pimples and cysts on
+          the skin.
+        </p>
+
+        <p>
+          Body ‘N’ Bloom offers safe and effective acne scar removal treatments.
+          Call <a href="tel:6135228504">613-522-8504</a>
+          or <a
+            href="https://bodynbloom.janeapp.com/"
+            target="_blank"
+            rel="noreferrer">book an appointment online</a
+          >.
+        </p>
+      </div>
+    </div>
+  </Main>
+</Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>

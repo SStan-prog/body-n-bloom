@@ -1,0 +1,130 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/MainWithSlider/Main.astro';
+import Guidelines from '../../components/Treatments/Guidelines.astro';
+
+import slider1 from '../../../public/images/treatments/laser-wrinkle-treatment/slider-1.jpeg';
+import slider2 from '../../../public/images/treatments/laser-wrinkle-treatment/slider-2.jpeg';
+import slider3 from '../../../public/images/treatments/laser-wrinkle-treatment/slider-3.jpeg';
+import slider4 from '../../../public/images/treatments/laser-wrinkle-treatment/slider-4.jpeg';
+import slider5 from '../../../public/images/treatments/laser-wrinkle-treatment/slider-5.jpg';
+import slider6 from '../../../public/images/treatments/laser-wrinkle-treatment/slider-6.jpeg';
+
+let images = [slider1, slider2, slider3, slider4, slider5, slider6];
+
+let altText = 'A before and after pic of laser wrinkle treatment.';
+---
+
+<Layout title="Laser Wrinkle Treatment">
+  <Header
+    heading="Laser Wrinkle Treatment"
+    bg="images/treatments/spider-veins/spider-veins-header.jpg"
+  />
+  <Main images={images} altText={altText}>
+    <div slot="text">
+      <div class="text-container">
+        <h2>Laser Wrinkle Treatment</h2>
+        <p>
+          Address those stubborn lines with our laser wrinkle treatment. Also
+          known as skin tightening, you’ll look as young as you feel!
+        </p>
+        <p>
+          Our laser wrinkle treatment machine has helped our clients minimize:
+        </p>
+        <ul>
+          <li>Crow’s feet</li>
+          <li>Wrinkles around the eyes</li>
+          <li>Smile lines</li>
+          <li>Frown lines</li>
+          <li>Smoker’s lines</li>
+        </ul>
+        <p>Body ‘N’ Bloom’s Laser Wrinkle Treatment Options:</p>
+        <p>
+          The <a
+            href="https://syneron-candela.com/int/product/etwo"
+            target="_blank"
+            rel="noreferrer">eTwo machine</a
+          > is a new platform based on the eMatrix™ technology and combines sublime
+          and sublative applications for an amazing facial rejuvenation. eTwo allows
+          for the connection of two applicators simultaneously, each specifically
+          designed for different tissue thicknesses
+        </p>
+        <p>
+          Sublative – fractional energy delivered to the skin with low epidermal
+          disruption and high dermal impact for ALL Skin Types
+        </p>
+        <p>
+          Sublime – Non-invasive, controlled elōs-based deep dermal heating for
+          deep folds and lower face contour on ALL skin types.
+        </p>
+        <p>
+          Call us today at <a href="tel:6135228504">613-522-8504</a> for a free consultation
+          to find out which treatment would be best for your concerns or <a
+            href="https://bodynbloom.janeapp.com/"
+            target="_blank"
+            rel="noreferrer">book an appointment online</a
+          >.
+        </p>
+      </div>
+    </div>
+  </Main>
+  <Guidelines heading="PRE AND POST TREATMENT GUIDELINES">
+    <ol slot="pre-treatment">
+      <li class="guidelines__list-item">
+        Freshly tanned skin (i.e., skin tanned within 1-2 weeks of treatment)
+        can NOT be treated.
+      </li>
+      <li>Ensure that the skin is clean and dry.</li>
+      <li>
+        If topical anesthetic is used, degrease and wash it off thoroughly with
+        soap and water prior to treatment.
+      </li>
+    </ol>
+    <ol slot="post-treatment">
+      <li>
+        A cool compress or cool Aloe Vera gel can be applied immediately after
+        the treatment to provide comfort.
+      </li>
+      <li>
+        Apply cool compresses for 10 minutes every hour while at home for
+        comfort/swelling. The patient may need to sleep with the head elevated
+        for 1-2 nights..
+      </li>
+      <li>
+        If outdoors, must apply sunblock with at least SPF 30 daily to the
+        treated area for at least two weeks following treatment.
+      </li>
+      <li>
+        Avoid unprotected sun exposure for at least two weeks; otherwise, it may
+        result in hyperpigmentation without proper sun protection. The sunblock
+        should be reapplied several times during the day.
+      </li>
+      <li>Avoid strenuous exercise for 24 hours following treatment.</li>
+    </ol>
+  </Guidelines>
+</Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>

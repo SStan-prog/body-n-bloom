@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/MainNoSlider/Main.astro';
+
+import image from '../../../public/images/treatments/stretch-marks/stretch-marks.jpeg';
+
+let altText = 'A before and after pic of sun spot damage repair.';
+---
+
+<Layout title="Stretch Marks">
+  <Header
+    heading="Stretch Marks"
+    bg="images/treatments/spider-veins/spider-veins-header.jpg"
+  />
+  <Main image={image} altText={altText}>
+    <div slot="text">
+      <div class="text-container">
+        <h2>Stretch Marks Ottawa</h2>
+        <p>
+          <strong style="font-size: 2.4rem">What Causes Stretch Marks?</strong
+          ><br />
+          They commonly appear after a change in your weight and after pregnancies.
+          Stretch marks affect men, women and even children who grow quickly. Fortunately,
+          stretch marks are not dangerous, and they often disappear over time.
+        </p>
+
+        <p>
+          <strong style="font-size: 2.4rem"
+            >What Do Stretch Marks Look Like?</strong
+          ><br />
+          They look like parallel lines on your skin. They are typically a different
+          colour and texture than your normal skin, and can be purple, pink or light
+          gray. Stretch marks can often feel itchy, or sore, and may also feel indented
+          on your skin.
+        </p>
+
+        <p>
+          <strong style="font-size: 2.4rem"
+            >Where Do Stretch Marks Occur?</strong
+          ><br />
+          The most common areas on your body include your upper arms, stomach, breasts,
+          buttocks and thighs.
+        </p>
+
+        <p>
+          <strong style="font-size: 2.4rem"
+            >How Do We Treat Stretch Marks?</strong
+          ><br />
+          Body ‘N’ Bloom uses a new platform based on the <a
+            href="https://candelamedical.com/"
+            target="_blank"
+            rel="noreferrer">eMatrix™ system</a
+          > which allows the connection of 2 applicators simultaneously, each specifically
+          designed for different tissue thicknesses.
+        </p>
+
+        <p>
+          Our sublative system directs fractional RF energy into the skin with
+          low epidermal disruption and high dermal impact in the form of a
+          matrix. The healthy skin around the RF energy matrix helps accelerate
+          the healing process as new collagen and healthy skin cells are
+          produced after the treatment.
+        </p>
+
+        <p>
+          Sublative treatments are suitable for all skin types with a 30-60%
+          success rate.
+        </p>
+
+        <p>
+          To learn more about our treatment options, please call us at <a
+            href="tel:6135228504">613-522-8504</a
+          >
+          or <a
+            href="https://bodynbloom.janeapp.com/"
+            target="_blank"
+            rel="noreferrer">book an appointment online</a
+          >.
+        </p>
+      </div>
+    </div>
+  </Main>
+</Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>

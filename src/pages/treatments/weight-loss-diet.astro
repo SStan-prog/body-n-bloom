@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/MainWithSlider/Main.astro';
+import Guidelines from '../../components/Treatments/Guidelines.astro';
+
+import slider1 from '../../../public/images/treatments/weight-loss-diet/slider-1.jpeg';
+import slider2 from '../../../public/images/treatments/weight-loss-diet/slider-2.jpeg';
+import slider3 from '../../../public/images/treatments/weight-loss-diet/slider-3.jpeg';
+import slider4 from '../../../public/images/treatments/weight-loss-diet/slider-4.jpeg';
+import slider5 from '../../../public/images/treatments/weight-loss-diet/slider-5.jpeg';
+import slider6 from '../../../public/images/treatments/weight-loss-diet/slider-6.jpeg';
+import slider7 from '../../../public/images/treatments/weight-loss-diet/slider-7.jpeg';
+
+let images = [slider1, slider2, slider3, slider4, slider5, slider6, slider7];
+
+let altText = 'A photo of heathly food and supplements.';
+---
+
+<Layout title="Weight Loss Diet">
+  <Header
+    heading="Weight Loss Diet"
+    bg="images/treatments/spider-veins/spider-veins-header.jpg"
+  />
+  <Main images={images} altText={altText}>
+    <div slot="text">
+      <div class="text-container">
+        <h2>Metabolic Balance Weight Loss Diet Ottawa</h2>
+        <p>
+          The <a
+            href="https://ca.metabolic-balance.com/"
+            target="_blank"
+            rel="noreferrer">Metabolic Balance® weight loss diet</a
+          > is a personalized nutrition plan tailored to your own individual needs.
+          Because no two diet plans are the same, this customized diet plan is based
+          on your own bloodwork, and thirty-four biomarker analyses.
+        </p>
+        <p>
+          The results are combined with your entire health profile including
+          height, weight, measurements, diseases, food allergies, medications
+          and food likes/dislikes and tailored specifically to who you are and
+          what you need.
+        </p>
+        <p>
+          Body ‘N’ Bloom’s clients are following the Metabolic Balance® weight
+          loss diet and have seen improvements in:
+        </p>
+        <ul>
+          <li>Extreme fatigue</li>
+          <li>High blood pressure</li>
+          <li>Diabetes</li>
+          <li>Obesity</li>
+          <li>Insulin resistance</li>
+          <li>Anxiety</li>
+          <li>
+            Hormonal issues (PCOS, Endometriosis, pre & post-menopausal
+            symptoms)
+          </li>
+          <li>Struggle with sleep</li>
+          <li>Struggle with inflammation, aches and pains</li>
+          <li>Digestive issues like bloating, constipation or diarrhea</li>
+          <li>Struggle with infertility</li>
+          <li>Extreme food cravings or binge eating</li>
+          <li>Allergies and skin disorders</li>
+          <li>Liver and gallbladder issues</li>
+        </ul>
+        <p>
+          The Metabolic Balance® weight loss dietis an innovative all-natural
+          nutrition program that brings balance to hormones, optimizes health
+          for many health conditions such as high blood pressure and
+          cholesterol, helps with Diabetes 2, with allergies, etc. This program
+          leads to a new invigorating lifestyle resulting in successful
+          long-term weight management. It is backed by over 25 years of
+          scientific research and is managed by dedicated physicians and
+          nutritional scientists.
+        </p>
+
+        <p>
+          <strong>How the Metabolic Balance® Weight Loss Diet Works</strong><br
+          />
+          Before making any nutritional recommendations, Metabolic Balance® requires
+          a complete bio-chemistry (blood test) and health profile analysis.The personalized
+          nutrition plan directs clients to supply their body with all the vital
+          and healthy nutrients they need. Food is NOT selected according to calorie
+          content or by percentage of fat, protein or carbohydrates. The criteria
+          for food selection is based on the effect of specific foods on hormones
+          and missing nutrients in the body.
+        </p>
+
+        <p>
+          There are no prescribed injections, pills, shakes, or proprietary
+          foods. Nor are users required to keep “points” or count calories.
+          Through this method a healthy and naturally balanced insulin
+          production is promoted. Insulin is the “internal key” to the body’s
+          weight management system and has a substantial effect on other
+          hormonal and enzyme production.
+        </p>
+        <p>
+          To learn more about the Metabolic Balance® weight loss diet, please
+          call <a href="tel:6135228504">613-522-8504</a> or <a
+            href="https://bodynbloom.janeapp.com/"
+            target="_blank"
+            rel="noreferrer">book an appointment online</a
+          >.
+        </p>
+      </div>
+    </div>
+  </Main>
+</Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>

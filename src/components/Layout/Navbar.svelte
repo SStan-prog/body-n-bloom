@@ -52,7 +52,7 @@
                 
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="/blog">Blogs</a>
+                <a href="/blog">Blog</a>
               </li>
               <li class="nav__main-list-dropdown-item">
                 <a href="/referral-program">Referral Program</a>
@@ -174,8 +174,13 @@
           padding-bottom: 1rem;
           margin-bottom: -1rem;
 
+          & p {
+            font-weight: bold;
+          }
+
           & a {
             color: var(--color-grey);
+        
           }
 
           &:hover .nav__main-list-dropdown{

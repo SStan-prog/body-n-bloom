@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Common/Header.astro';
+import Main from '../../components/Treatments/GreenPeel/Main.astro';
+
+import image from '../../../public/images/treatments/nail-fungus/nail-fungus.jpeg';
+
+let altText = 'A before and after pic of sun spot damage repair.';
+---
+
+<Layout title="Green Peel">
+  <Header
+    heading="Green Peel Treatment"
+    bg="images/treatments/spider-veins/spider-veins-header.jpg"
+  />
+  <Main />
+</Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>

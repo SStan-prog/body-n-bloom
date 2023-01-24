@@ -1,0 +1,265 @@
+---
+import { Image } from '@astrojs/image/components';
+import Button from '../../Buttons/Button.astro';
+---
+
+<section class="section">
+  <div class="container">
+    <h2 class="heading">GREEN PEEL® Herbal Peeling Treatment in Ottawa</h2>
+    <Image
+      src="/images/treatments/green-peel/green-peel-header.jpg"
+      alt="A woman receiving a green peel treatment."
+      width={1000}
+      aspectRatio={5 / 3}
+      format="webp"
+      fit="cover"
+      position="center"
+      background="transparent"
+    />
+
+    <p>
+      Whether you’re looking for a quick pick me up or a complete skin
+      refresher, the GREEN PEEL® Herbal Peeling Treatment is going to be the
+      answer, no matter what type of skin you have!
+    </p>
+    <p>
+      Initially developed 60 years ago, the treatment is a mixture of herbs
+      containing enzymes, minerals, and vitamins, and is massaged into the skin
+      for varying lengths of time to give the client the desired result. The
+      GREEN PEEL® can only be applied by certified aestheticians and doctors,
+      and Body ‘N’ Bloom is proud to be one of those certified clinics (one of
+      less than five in the Ottawa area!)
+    </p>
+    <p>
+      Because the GREEN PEEL® is comprised of natural ingredients (no
+      chemicals!) in just five days you’ll see clearer, more youthful,
+      healthier, and firmer looking skin without any of the harsh, drying
+      results you see in most acid-based treatments.
+    </p>
+
+    <div class="columns">
+      <div class="column">
+        <h3>What Results can I expect with the Green Peel ® Treatment?</h3>
+        <p>
+          The GREEN PEEL® treatment has decades of proven results in correcting
+          skin issues on the face and body that include:
+        </p>
+        <ul>
+          <li>Large pores;</li>
+          <li>Impure skin and sebum cysts;</li>
+          <li>Scars;</li>
+          <li>Skin prone to premature formation of wrinkles and sagging;</li>
+          <li>Sun-damaged skin;</li>
+          <li>Anti-Aging prophylaxis;</li>
+          <li>Some forms of hyper-pigmentations;</li>
+          <li>Stretch marks (striae); and</li>
+          <li>
+            Sagging skin on the body (abdominal wall, upper arms, thighs).
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <Image
+          src="/images/treatments/green-peel/green-peel-2.jpg"
+          alt="A woman receiving a green peel treatment."
+          width={600}
+          aspectRatio={4 / 3}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column row-2">
+        <Image
+          src="/images/treatments/green-peel/green-peel-3.jpg"
+          alt="A woman receiving a green peel treatment."
+          width={600}
+          aspectRatio={4 / 3}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+      </div>
+      <div class="column">
+        <h3>Three Types of Green Peel ® Treatments</h3>
+        <p>
+          There are three types of treatment options to ensure you get exactly
+          the result you’re looking for.
+        </p>
+        <p>
+          <strong>The GREEN PEEL® CLASSIC</strong><br />is for skin regeneration
+          and renewal.
+        </p>
+        <p>
+          <strong>The GREEN PEEL® ENERGY</strong><br />is for a kick of vitality
+          and regeneration,
+        </p>
+        <p>
+          <strong>The GREEN PEEL® FRESH UP</strong><br />delivers a kick of
+          freshness without the peeling effect.
+        </p>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column row-2">
+        <Image
+          src="/images/treatments/green-peel/Green-Peel-Before-and-After-2.jpg"
+          alt="Before and after images of a green peel treatment."
+          width={600}
+          aspectRatio={1}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+        <p>
+          Images via <a
+            href="https://www.greenpeel.com/"
+            target="_blank"
+            rel="noreferrer">https://www.greenpeel.com</a
+          >
+        </p>
+      </div>
+      <div class="column">
+        <Image
+          src="/images/treatments/green-peel/Green-Peel-Before-and-After-1.jpg"
+          alt="Before and after images of a green peel treatment."
+          width={600}
+          aspectRatio={1}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+      </div>
+      <div class="column wide">
+        <h3>
+          Watch this video to learn more about the GREEN PEEL CLASSIC treatment:
+        </h3>
+        <iframe
+          src="https://www.youtube.com/embed/CZF6C5yt818"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <p>
+          If you have additional questions about the Green Peel Treatment <a
+            href="/contact">contact us</a
+          > today or book your appointment online.
+        </p>
+        <Button text="Book now" />
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .container {
+      padding: 10rem 10rem 5rem;
+      max-width: 120rem;
+      margin: 0 auto;
+
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: 900px) {
+        padding: 5rem;
+      }
+
+      @media (max-width: 400px) {
+        padding: 5rem 2rem;
+      }
+
+      & h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 600px) {
+          font-size: 3rem;
+        }
+      }
+
+      & h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 600px) {
+          font-size: 2.4rem;
+        }
+      }
+
+      & img {
+        margin-bottom: 2rem;
+        width: 100%;
+        height: auto;
+      }
+
+      & p {
+        margin-bottom: 1rem;
+      }
+
+      & ul {
+        margin-left: 1rem;
+
+        & li {
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+
+      margin-top: 5rem;
+
+      margin-bottom: 2.5rem;
+
+      @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .column {
+      & img {
+        width: 100%;
+        height: auto;
+      }
+
+      &.row-2 {
+        @media (max-width: 800px) {
+          grid-row: 2;
+        }
+      }
+
+      &.wide {
+        grid-column: 1 / 3;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 800px) {
+          grid-column: 1 / 2;
+        }
+      }
+
+      & iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin-bottom: 5rem;
+      }
+
+      & p {
+        margin-bottom: 3rem;
+      }
+    }
+  </style>
+</section>
