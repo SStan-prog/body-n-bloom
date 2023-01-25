@@ -36,7 +36,7 @@
   <div class="nav__main">
         <div class="nav__main-logo-container">
           <a href="/">
-          <img src="/images/logos/BNB_logo.png" alt="Body 'N' Bloom Logo" >
+          <img src="/images/logos/BNB_logo.png" alt="Body 'N' Bloom Logo"  >
         </a>
         </div>
         <ul class="nav__main-list">
@@ -117,7 +117,7 @@
             <a  href="https://bodynbloom.janeapp.com/" class="btn" target = "_blank" rel= "noreferrer ">Book Online</a>
           </li>
         </ul>
-        <button class="menu-btn" on:click={toggle} name="Open mobile menu">
+        <button class="menu-btn" on:click={toggle} aria-label="Open mobile menu">
               <div class={openMenu ? "active" : ""}></div>
               <div class={openMenu  ? "active" : ""}></div>
               <div class={openMenu  ? "active" : ""}></div>
@@ -149,7 +149,9 @@
 
       &-logo-container{
         & img{
-          max-width: 12rem;
+          max-width: 16.3rem;
+          width: 100%;
+          height: auto;
         }
       }
 
