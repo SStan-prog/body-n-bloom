@@ -117,7 +117,7 @@
             <a  href="https://bodynbloom.janeapp.com/" class="btn" target = "_blank" rel= "noreferrer ">Book Online</a>
           </li>
         </ul>
-        <button class="menu-btn" on:click={toggle}>
+        <button class="menu-btn" on:click={toggle} name="Open mobile menu">
               <div class={openMenu ? "active" : ""}></div>
               <div class={openMenu  ? "active" : ""}></div>
               <div class={openMenu  ? "active" : ""}></div>
