@@ -1,0 +1,291 @@
+---
+import { Image } from '@astrojs/image/components';
+import Button from '../../Buttons/Button.astro';
+---
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h2 class="heading">HydraFacial MD®</h2>
+        <p>
+          At Body 'N' Bloom, we use the HydraFacial MD® Elite system, which is a
+          non-invasive, multistep treatment that combines the benefits of
+          next-level hydradermabrasion, a chemical peel, automated painless
+          extractions (no pinching!) and a special delivery of Antioxidants,
+          Hyaluronic Acid and Peptides that uses Vortex Technology.
+        </p>
+        <p>
+          The HydraFacial MD® treatment is great for all skin types, it is
+          highly effective at improving overall skin health like:
+        </p>
+        <ul>
+          <li>Fine Lines and Wrinkles</li>
+          <li>Elasticity and Firmness</li>
+          <li>Hyperpigmentation/Photo Damage</li>
+          <li>Dullness and Dehydration</li>
+          <li>Oily/Congested Skin</li>
+          <li>Enlarged Pores</li>
+          <li>Acne & Blemishes</li>
+          <li>Dry or Dehydrated Skin</li>
+          <li>Extractions of Black & White Heads</li>
+          <li>Exfoliate Dead Skin</li>
+        </ul>
+      </div>
+      <div class="column">
+        <Image
+          src="/images/treatments/platelet-rich-plasma/platelet-rich-plasma.jpg"
+          alt="A woman who receiving hydrafacial treatment."
+          width={600}
+          aspectRatio={1 / 1}
+          format="webp"
+          fit="cover"
+          position="center"
+          background="transparent"
+        />
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column wide">
+        <h3>
+          The HydraFacial MD® treatment involves the following steps to help
+          recharge and renew your skin:
+        </h3>
+        <ul>
+          <li>
+            Cleanse and Exfoliate: dead skin cells are removed, new healthy skin
+            revealed
+          </li>
+          <li>
+            Gentle Acid Peel: Loosens impurities from pores without irritation
+          </li>
+          <li>
+            Extraction: Vortex suction extracts and cleans out pores in a
+            painless procedure
+          </li>
+          <li>
+            Hydrate: Antioxidants and Hyaluronic Acid are Vortex-Fused to
+            protect and nourish skin
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column wide">
+        <div class="heading">
+          <h2>4 REASONS WHY SHOULD YOU HAVE HYDRAFACIAL:</h2>
+          <div class="heading__accent">
+            <div class="heading__accent-line"></div>
+            <img src="/icons/leaf.svg" alt="leaf" />
+            <div class="heading__accent-line"></div>
+          </div>
+          <ul>
+            <li>
+              Personalized Treatment, every time-The treatment is highly
+              customizable. Everyone has different skin with different needs. We
+              can create a treatment that works for you.
+            </li>
+            <li>
+              Fights Acne and Clears Pores- Adults get acne too, though not as
+              often as adolescents do. Hydrafacial is great for everyone
+              especially for people with acne-prone skin. In the third stage of
+              the treatment, we will extract all the buildup from deep inside
+              your pores.
+            </li>
+            <li>
+              Gives Skin a Healthier Appearance- The anti-oxidant treatment in
+              the final stage during Hydrafacial treatment which, helps the skin
+              continue to shine by helping it fight skin cell breakdown and
+              creating longer-lasting results.
+            </li>
+            <li>
+              No Downtime- Treatment takes about a one hour, and causes little
+              to no discomfort.
+            </li>
+          </ul>
+          <Button
+            text="Book now"
+            href="https://bodynbloom.janeapp.com/"
+            blank
+          />
+        </div>
+      </div>
+    </div>
+
+    <style lang="scss">
+      .container {
+        padding: 10rem 10rem 5rem;
+        max-width: 120rem;
+        margin: 0 auto;
+
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 900px) {
+          padding: 5rem;
+        }
+
+        @media (max-width: 400px) {
+          padding: 5rem 2rem;
+        }
+
+        & h2 {
+          font-size: 4rem;
+          margin-bottom: 2rem;
+          text-align: left;
+
+          @media (max-width: 600px) {
+            font-size: 3rem;
+          }
+        }
+
+        & h3 {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+          text-align: left;
+          width: 100%;
+
+          @media (max-width: 600px) {
+            font-size: 2.4rem;
+          }
+        }
+
+        & img {
+          margin-bottom: 2rem;
+          width: 100%;
+          height: auto;
+        }
+
+        & p {
+          margin-bottom: 1rem;
+        }
+
+        & ul {
+          margin-left: 1rem;
+          margin-bottom: 2rem;
+
+          & li {
+            margin: 1rem 0;
+          }
+        }
+      }
+
+      .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+
+        margin-top: 5rem;
+
+        margin-bottom: 2.5rem;
+
+        @media (max-width: 800px) {
+          grid-template-columns: 1fr;
+        }
+
+        &.short {
+          max-width: 80rem;
+
+          & img {
+            max-width: 30rem;
+          }
+        }
+      }
+
+      .column {
+        & img {
+          width: 100%;
+          height: auto;
+        }
+
+        & video {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16/9;
+        }
+
+        &.row-2 {
+          @media (max-width: 800px) {
+            grid-row: 2;
+          }
+        }
+
+        &.wide {
+          grid-column: 1 / 3;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          text-align: left;
+
+          & p {
+            width: 100%;
+          }
+
+          & ul {
+            text-align: left;
+            width: 100%;
+            margin-bottom: 5rem;
+          }
+
+          @media (max-width: 800px) {
+            grid-column: 1 / 2;
+          }
+        }
+
+        & iframe {
+          width: 100%;
+          aspect-ratio: 16/9;
+          margin-bottom: 5rem;
+        }
+
+        & p {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .heading {
+        font-family: var(--font-heading);
+        text-align: center;
+
+        margin-bottom: 2rem;
+
+        &__container {
+          margin-bottom: 5rem;
+        }
+
+        & h2 {
+          font-size: 4rem;
+
+          text-transform: uppercase;
+
+          @media (max-width: 600px) {
+            font-size: 3rem;
+          }
+        }
+
+        &__accent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          & img {
+            width: 3rem;
+          }
+
+          &-line {
+            height: 0.1rem;
+            width: 6rem;
+            background-color: var(--color-blue);
+          }
+        }
+      }
+    </style>
+  </div>
+</section>

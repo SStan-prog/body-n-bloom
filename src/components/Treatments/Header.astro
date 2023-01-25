@@ -4,7 +4,7 @@ const { bg, heading } = Astro.props;
 
 <header
   class="header"
-  style={` background-image:linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.2 )), url('../../${bg}')`}
+  style={` background-image:linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.2 )), url('${bg}')`}
 >
   <div class="header__container">
     <h1 class="header__heading">{heading}</h1>

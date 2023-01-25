@@ -85,19 +85,16 @@
                 <a href="/treatments/green-peel/">Green Peel</a>
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/acne-scar-removal/">Acne Scar Removal</a>
+                <a href="/treatments/platelet-rich-plasma-treatments/">Platelet Rich Plasma Treatments</a>
               </li>
               <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/platelet-rich-plasma-treatments/">Platelet Rich Plasma Treatments</a>
+                <a href="/treatments/acne-scar-removal/">Acne Scar Removal</a>
               </li>
               <li class="nav__main-list-dropdown-item">
                 <a href="/treatments/mesotherapy/">Mesotherapy</a>
               </li>
               <li class="nav__main-list-dropdown-item">
                 <a href="/treatments/stretch-marks/">Stretch Marks</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/bridal-party-facial-packages">Bridal Party Facial Packages</a>
               </li>
               <li class="nav__main-list-dropdown-item">
                 <a href="/treatments/weight-loss-diet/">Weight Loss Diet</a>
@@ -213,7 +210,7 @@
 
     &__top {
       padding: 0.5rem 10rem;
-      background-color: var(--color-green);
+      background-color: var(--color-green-dark);
 
       display: flex;
       justify-content: space-between;
