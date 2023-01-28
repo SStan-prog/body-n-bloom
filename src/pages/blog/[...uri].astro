@@ -10,21 +10,11 @@ export async function getStaticPaths() {
   return await getAllUris();
 }
 
-// function resolveContentTemplate(node: any) {
-//   let template;
-//   switch (node.__typename) {
-//     case "Post":
-//       template = Single;
-//       break;
-//     default:
-//       template = Single;
-//   }
-//   return template;
-// }
-// const Template = resolveContentTemplate(node);
 const seo = node.seo;
+
+console.log(node);
 ---
 
-<SingleLayout title="single">
+<SingleLayout title={node.title} description={node.excerpt}>
   <Single post={node} />
 </SingleLayout>

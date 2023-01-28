@@ -7,7 +7,7 @@ import Archive from '../../components/Blog/Archive.astro';
 const data = await blogPageQuery();
 ---
 
-<Layout title="Blog">
+<Layout title="Blog" description="Tips for taking care of your skin.">
   <Header heading="Our blog" bg="/images/blog-header.jpeg" />
   <Archive posts={data.posts.nodes} />
 </Layout>
