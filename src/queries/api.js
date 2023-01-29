@@ -103,3 +103,26 @@ export async function getAllUris() {
 
   return uris;
 }
+
+export async function getPricing() {
+  const sitePricingQueryRes = await fetch(import.meta.env.WP_API_URL, {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `{
+        pageBy(uri: "/pricing") {
+          id
+          pricing {
+            services {
+              details
+              serviceName
+            }
+          }
+        }
+      }
+              `,
+    }),
+  });
+  const { data } = await sitePricingQueryRes.json();
+  return data;
+}

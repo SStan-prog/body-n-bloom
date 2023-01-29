@@ -1,0 +1,58 @@
+---
+import PricingChart from './PricingChart/index.svelte';
+
+const { pricing } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="text">
+      <h2>About Our Pricing</h2>
+      <p>
+        Unlike many laser clinics, all prices listed below are for single
+        sessions, all applicable taxes are not included in the price. Many other
+        clinics use packages or multiple session bundles, but everyone is unique
+        and these set bundles may not provide you with your desired outcome.
+        Here at Body ‘N’ Bloom we want to provide you with a custom and unique
+        experience flexible to your needs.
+      </p>
+    </div>
+    <div class="pricing">
+      <PricingChart client:load pricing={pricing} />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 10rem;
+
+    @media (max-width: 900px) {
+      padding: 10rem;
+    }
+
+    @media (max-width: 600px) {
+      padding: 7.5rem 2.5rem;
+    }
+
+    @media (max-width: 450px) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .text {
+    max-width: 80rem;
+
+    margin-bottom: 10rem;
+
+    & h2 {
+      font-size: 4rem;
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+  }
+</style>

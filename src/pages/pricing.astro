@@ -1,9 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Common/Header.astro';
+import Pricing from '../components/Pricing/index.astro';
+
+import { getPricing } from '../queries/api';
+
+const data = await getPricing();
+const pricing = data.pageBy.pricing;
 ---
 
 <Layout
-  title="Referral Program"
+  title="Pricing"
   description="Unlike many laser clinics, all prices listed below are for single sessions, all applicable taxes are not included in the price. Many other clinics use packages or multiple session bundles, but everyone is unique and these set bundles may not provide you with your desired outcome."
-/>
+>
+  <Header heading="Pricing" bg="/images/common-header.jpg" />
+  <Pricing pricing={pricing} />
+</Layout>
