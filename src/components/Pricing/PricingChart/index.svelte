@@ -2,17 +2,15 @@
   import { fade } from 'svelte/transition';
 
   export let pricing;
-  let optionsTwo = pricing.services.map((options) => options.serviceName);
+  let options = pricing.services.map((options) => options.serviceName);
   let services = pricing.services;
-
-  console.log(optionsTwo);
-  let active = optionsTwo[0];
+  let active = options[0];
 </script>
 
 <div class="pricing__container">
   <div class="pricing__options">
     <ul class="pricing__options__list">
-      {#each optionsTwo as option}
+      {#each options as option}
         <li
           class="pricing__option"
           class:active={active === option}
@@ -93,7 +91,6 @@
     }
 
     &__tables-container {
-      max-height: 512px;
       overflow-y: scroll;
 
       -ms-overflow-style: none; /* IE and Edge */
