@@ -1,0 +1,6 @@
+[[redirects]]
+from = "/about-ilona-pap"
+to =  "/about"
+status = 200
+force = true
+
