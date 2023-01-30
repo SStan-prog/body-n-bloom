@@ -1,12 +1,11 @@
 <script>
   import MobileMenu from './MobileMenu.svelte';
 
-  import { slide } from 'svelte/transition'
-      let openMenu = false
-    const toggle = ()=> {
-      openMenu = !openMenu
-
-    }
+  import { slide } from 'svelte/transition';
+  let openMenu = false;
+  const toggle = () => {
+    openMenu = !openMenu;
+  };
 </script>
 
 <nav class="nav">
@@ -22,109 +21,123 @@
       </div>
     </div>
     <div class="nav__top-social">
-      <a href="https://www.facebook.com/bodynbloom" target="_blank" rel="noreferrer">
+      <a
+        href="https://www.facebook.com/bodynbloom"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img src="/icons/facebook.svg" alt="Facebook" />
       </a>
       <a href="https://twitter.com/bnblaser" target="_blank" rel="noreferrer">
         <img src="/icons/twitter.svg" alt="Twitter" />
       </a>
-      <a href="https://www.instagram.com/bnblaser/" target="_blank" rel="noreferrer">
+      <a
+        href="https://www.instagram.com/bnblaser/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img src="/icons/instagram.svg" alt="Instagram" />
       </a>
     </div>
   </div>
   <div class="nav__main">
-        <div class="nav__main-logo-container">
-          <a href="/">
-          <img src="/images/logos/BNB_logo.png" alt="Body 'N' Bloom Logo"  >
-        </a>
-        </div>
-        <ul class="nav__main-list">
-          <li class="nav__main-list-item">
-            <p >About Us</p>
-            <ul class="nav__main-list-dropdown">
-              <li class="nav__main-list-dropdown-item">
-                <a href="/about">About</a>
-                
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/frequently-asked-questions">FAQ</a>
-                
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/blog">Blog</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/referral-program">Referral Program</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
+    <div class="nav__main-logo-container">
+      <a href="/">
+        <img src="/images/logos/BNB_logo.png" alt="Body 'N' Bloom Logo" />
+      </a>
+    </div>
+    <ul class="nav__main-list">
+      <li class="nav__main-list-item">
+        <p>About Us</p>
+        <ul class="nav__main-list-dropdown">
+          <li class="nav__main-list-dropdown-item">
+            <a href="/about">About</a>
           </li>
-
-          <li class="nav__main-list-item">
-            <p href="#">Treatments</p>
-            <ul class="nav__main-list-dropdown">
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/laser-hair-removal/">Laser hair removal</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/spider-veins/">Spider Veins</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/sun-spot-damage/">Sun spot damage</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/wrinkles-reduction/">Laser Wrinkle Treatment</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/nail-fungus/">Nail Fungus</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/green-peel/">Green Peel</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/platelet-rich-plasma-treatments/">Platelet Rich Plasma Treatments</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/acne-scar-removal/">Acne Scar Removal</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/mesotherapy/">Mesotherapy</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/stretch-marks/">Stretch Marks</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/weight-loss-diet/">Weight Loss Diet</a>
-              </li>
-              <li class="nav__main-list-dropdown-item">
-                <a href="/treatments/hydrafacial/">Hydrafacial</a>
-              </li>
-            </ul>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/frequently-asked-questions">FAQ</a>
           </li>
-
-          <li class="nav__main-list-item">
-            <a href="/bridal-party-facial-packages">Wedding</a>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/blog">Blog</a>
           </li>
-
-          <li class="nav__main-list-item">
-            <a href="/pricing">Pricing</a>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/referral-program">Referral Program</a>
           </li>
-
-          <li>
-            <a  href="https://bodynbloom.janeapp.com/" class="btn" target = "_blank" rel= "noreferrer ">Book Online</a>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/contact">Contact</a>
           </li>
         </ul>
-        <button class="menu-btn" on:click={toggle} aria-label="Open mobile menu">
-              <div class={openMenu ? "active" : ""}></div>
-              <div class={openMenu  ? "active" : ""}></div>
-              <div class={openMenu  ? "active" : ""}></div>
-        </button>
+      </li>
+
+      <li class="nav__main-list-item">
+        <p href="#">Treatments</p>
+        <ul class="nav__main-list-dropdown">
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/laser-hair-removal/">Laser hair removal</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/spider-veins/">Spider Veins</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/sun-spot-damage/">Sun spot damage</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/wrinkles-reduction/">Laser Wrinkle Treatment</a
+            >
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/nail-fungus/">Nail Fungus</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/green-peel/">Green Peel</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/platelet-rich-plasma-treatments/"
+              >Platelet Rich Plasma Treatments</a
+            >
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/acne-scar-removal/">Acne Scar Removal</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/mesotherapy/">Mesotherapy</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/stretch-marks/">Stretch Marks</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/weight-loss-diet/">Weight Loss Diet</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/hydrafacial/">Hydrafacial</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav__main-list-item">
+        <a href="/bridal-party-facial-packages">Wedding</a>
+      </li>
+
+      <li class="nav__main-list-item">
+        <a href="/pricing">Pricing</a>
+      </li>
+
+      <li>
+        <a
+          href="https://bodynbloom.janeapp.com/"
+          class="btn"
+          target="_blank"
+          rel="noreferrer ">Book Online</a
+        >
+      </li>
+    </ul>
+    <button class="menu-btn" on:click={toggle} aria-label="Open mobile menu">
+      <div class={openMenu ? 'active' : ''} />
+      <div class={openMenu ? 'active' : ''} />
+      <div class={openMenu ? 'active' : ''} />
+    </button>
   </div>
   {#if openMenu}
-  <MobileMenu openMenu = {openMenu} />
+    <MobileMenu {openMenu} />
   {/if}
 </nav>
 
@@ -132,7 +145,7 @@
   .nav {
     position: relative;
 
-    &__main{
+    &__main {
       padding: 1rem 5rem;
       background-color: var(--color-white);
 
@@ -143,31 +156,27 @@
 
       @media (max-width: 600px) {
         padding: 1rem 2.5rem;
-    }
+      }
 
-
-
-      &-logo-container{
-        & img{
+      &-logo-container {
+        & img {
           max-width: 16.3rem;
           width: 100%;
           height: auto;
         }
       }
 
-      &-list{
+      &-list {
         display: flex;
         width: 100%;
         justify-content: space-between;
         list-style: none;
 
         @media (max-width: 900px) {
-     display: none;
-    }
+          display: none;
+        }
 
-       
-
-        &-item{
+        &-item {
           position: relative;
           text-transform: uppercase;
           padding-bottom: 1rem;
@@ -175,20 +184,20 @@
 
           & p {
             font-weight: bold;
+
+            margin-bottom: 0;
           }
 
           & a {
             color: var(--color-grey);
-        
           }
 
-          &:hover .nav__main-list-dropdown{
+          &:hover .nav__main-list-dropdown {
             display: block;
           }
         }
 
-
-        &-dropdown{
+        &-dropdown {
           position: absolute;
           top: 3rem;
           z-index: 2;
@@ -200,10 +209,9 @@
           padding: 1rem;
           box-shadow: var(--shadow-sm);
           border-radius: 5px;
-          
 
-          &-item{
-            margin:.5rem 0;
+          &-item {
+            margin: 0.5rem 0;
             white-space: nowrap;
           }
         }
@@ -299,7 +307,7 @@
     }
   }
 
-  .menu-btn{
+  .menu-btn {
     justify-self: flex-end;
     width: min-content;
     border: none;
@@ -313,30 +321,30 @@
     display: none;
 
     @media (max-width: 900px) {
-        display: flex;
-      }
+      display: flex;
+    }
 
     & div:first-child {
       transform: rotate(0deg);
     }
 
     & .active:first-child {
-     transform: rotate(45deg);
-     opacity: 1;
+      transform: rotate(45deg);
+      opacity: 1;
     }
 
     & .active:last-child {
-     transform: rotate(-45deg);
-     opacity: 1;
+      transform: rotate(-45deg);
+      opacity: 1;
     }
 
-    & div{
-      transition: transform .3s ease, opacity .3s ease;
-      height: .4rem;
+    & div {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      height: 0.4rem;
       width: 3rem;
       background-color: var(--color-black);
 
-      &.active{
+      &.active {
         opacity: 0;
       }
 
@@ -344,7 +352,7 @@
         transform-origin: left center;
       }
 
-      &:last-child{
+      &:last-child {
         transform-origin: left center;
       }
     }

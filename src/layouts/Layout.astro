@@ -1,6 +1,11 @@
 ---
 import Navbar from '../components/Layout/Navbar.svelte';
 import Footer from '../components/Layout/Footer.astro';
+
+import '@fontsource/dm-serif-display';
+import '@fontsource/dm-sans';
+import '@fontsource/dm-sans/700.css';
+
 export interface Props {
   title: string;
   description: string;
@@ -69,26 +74,31 @@ const { title, description } = Astro.props;
     --color-green-dark: #138001;
 
     //font size
-
     --font-size-body: 16px;
+
+    //font family
+    --font-heading: 'DM Serif Display', serif;
 
     //text shadow
     --header-text-shadow: 2px 2px #2b2b2ba9;
 
     //box shadow
     --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-
-    //breakpoints
-    $phonesmall: 450px;
-    $phone: 450px;
-    $tabport: 450px;
-    $tabland: 450px;
   }
 
   body {
     color: var(--color-black);
     font-size: var(--font-size-body);
-    font-family: arial;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
 
   a {
