@@ -22,7 +22,10 @@
       {/each}
     </ul>
   </div>
-  <div class="pricing__tables-container">
+  <div
+    class="pricing__tables-container"
+    style="max-height: calc(64px * {options.length}) ;"
+  >
     {#each services as service}
       {#if active === service.serviceName}
         <div in:fade={{ delay: 400 }} out:fade>
@@ -97,7 +100,7 @@
       scrollbar-width: none;
 
       @media (max-width: 1000px) {
-        max-height: 100%;
+        max-height: 100% !important;
       }
 
       &::-webkit-scrollbar {
@@ -116,6 +119,11 @@
     @media (max-width: 1000px) {
       flex-direction: column;
       padding: 2.5rem;
+    }
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      padding: 2.5rem 1rem;
     }
   }
 
@@ -165,7 +173,7 @@
 
     & th {
       padding: 0.5rem;
-      background-color: var(--color-blue);
+      /* background-color: var(--color-blue); */
 
       color: var(--color-white);
 
@@ -197,8 +205,9 @@
 
       &:first-child {
         border-top: solid 2px var(--color-blue);
+        background-color: var(--color-blue);
         border-radius: 8px 8px 0 0;
-        background-color: transparent;
+
         padding: 0;
       }
 

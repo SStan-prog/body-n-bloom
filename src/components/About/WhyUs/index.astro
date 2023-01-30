@@ -1,0 +1,210 @@
+---
+import Slider from './slider.svelte';
+---
+
+<section class="section">
+  <div class="container">
+    <div class="heading__container">
+      <div class="heading">
+        <h2>Why Choose Us?</h2>
+        <div class="heading__accent">
+          <div class="heading__accent-line"></div>
+          <img src="/icons/leaf.svg" alt="leaf" />
+          <div class="heading__accent-line"></div>
+        </div>
+      </div>
+      <p>
+        We care about you first and foremost. Your needs, your comfort, your
+        confidence, and of course, your skin. We understand each individual is
+        different, and therefore, so is their skin. That’s why we tailor our
+        treatments to your personal needs and desires to ensure you get the most
+        out of your visit to Body ‘N’ Bloom. Your happiness is our greatest
+        pleasure!
+      </p>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <Slider client:load />
+      </div>
+      <div class="column">
+        <div class="items">
+          <div class="items__item">
+            <img src="/icons/heart.svg" alt="heart icon" />
+            <h3>COMMITMENT TO THE BEST QUALITY</h3>
+            <p>
+              We have invested in the latest technology, equipment, and
+              materials to ensure that we provide the highest standard of laser
+              services.
+            </p>
+          </div>
+          <div class="items__item">
+            <img src="/icons/leaf.svg" alt="leaf icon" />
+            <h3>RELAXING ATMOSHERE AND COMPETETIVE PRICE</h3>
+            <p>
+              With an ambiance of relaxing music, every client receives
+              excellent care and an uplifting experience. You also receive
+              amazing services at a very competitive price.
+            </p>
+          </div>
+          <div class="items__item">
+            <img src="/icons/smile.svg" alt="smile icon" />
+            <h3>CLEAN AND SAFE ENVIROMENT</h3>
+            <p>
+              We are proud to announce that we are Public Health Certified. We
+              have met all the high standards and we will endeavour to
+              consistently keep the quality of our Laser Clinic high for our
+              clients.
+            </p>
+          </div>
+          <div class="items__item">
+            <a
+              href="https://www.google.com/search?q=bodynbloom+ottawa&oq=bodynbloom+ottawa&aqs=chrome..69i57j0i13i30j69i60l3.8685j0j7&sourceid=chrome&ie=UTF-8#lrd=0x4cce00ca7b47aba7:0x5bb2c273fc4a4794,1,,,,"
+              target="_blank"
+            >
+              <div class="reviews">
+                <div class="reviews__stars">
+                  <img src="/icons/star.svg" alt="star icon" />
+                  <img src="/icons/star.svg" alt="star icon" />
+                  <img src="/icons/star.svg" alt="star icon" />
+                  <img src="/icons/star.svg" alt="star icon" />
+                  <img src="/icons/star.svg" alt="star icon" />
+                </div>
+                <p>Over 150+ 5 Star Outstanding Customer Reviews</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .section {
+    background-color: #f1f1f1;
+  }
+
+  .container {
+    padding: 10rem 5rem;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      padding: 10rem 2rem;
+    }
+
+    & p {
+      color: var(--color-black);
+      font-size: 1.8rem;
+      max-width: 80rem;
+      text-align: center;
+
+      margin-bottom: 3rem;
+    }
+  }
+
+  .heading {
+    font-family: var(--font-heading);
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    &__container {
+      margin-bottom: 5rem;
+    }
+
+    & h2 {
+      font-size: 4rem;
+
+      text-transform: uppercase;
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    &__accent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      & img {
+        width: 3rem;
+      }
+
+      &-line {
+        height: 0.1rem;
+        width: 6rem;
+        background-color: var(--color-blue);
+      }
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 60% 35%;
+    gap: 5%;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: 10rem;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+
+      & img {
+        width: 6rem;
+        margin-bottom: 2rem;
+      }
+
+      & h3 {
+        text-align: left;
+        margin-bottom: 0.5rem;
+        font-family: var(--font-heading);
+      }
+
+      & p {
+        text-align: left;
+      }
+    }
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      font-size: 2rem;
+      text-align: center;
+      color: var(--color-blue);
+    }
+
+    &__stars {
+      & img {
+        width: 4rem;
+      }
+    }
+  }
+</style>

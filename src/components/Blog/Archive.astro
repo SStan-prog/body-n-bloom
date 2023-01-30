@@ -96,6 +96,11 @@ const { posts } = Astro.props;
     & img {
       border-radius: 20px 20px 0 0;
 
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+
       @media (max-width: 600px) {
         max-width: 28rem;
         height: auto;
