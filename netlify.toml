@@ -4,81 +4,97 @@ to =  "/about"
 status = 301
 force = true
 
+[[redirects]]
 from = "/about-ilona-pap"
 to =  "/about"
 status = 301
 force = true
 
+[[redirects]]
 from = "/laser-hair-removal-for-dark-skin-ottawa/"
 to =  "/treatments/laser-hair-removal/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/spider-veins/"
 to =  "/treatments/spider-veins/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/sun-spot-damage/"
 to =  "/treatments/sun-spot-damage/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/wrinkles-reduction-ottawa/"
 to =  "/treatments/laser-wrinkle-treatment/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/laser-nail-fungus-treatment-ottawa/"
 to =  "/treatments/laser-nail-fungus-treatment/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/green-peel/"
 to =  "/treatments/green-peel/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/acne-scar-removal-ottawa/"
 to =  "/treatments/acne-scar-removal/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/mesotherapy/"
 to =  "/treatments/mesotherapy/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/platelet-rich-plasma-treatments/"
 to =  "/treatments/platelet-rich-plasma-treatments/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/stretch-marks/"
 to =  "/treatments/stretch-marks/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/weight-loss-diet/"
 to =  "/treatments/weight-loss-diet/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/hydrafacial/"
 to =  "/treatments/hydrafacial/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/q-a/"
 to =  "/frequently-asked-questions/"
 status = 301
 force = true
 
+[[redirects]]
 from = "/blogs/"
 to =  "/blog/"
 status = 301
 force = true
 
+[[redirects]]
 from= "/blogs/*"
 to = "/blog/:splat"
 status = 301
