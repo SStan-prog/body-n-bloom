@@ -1,6 +1,6 @@
 ---
 import SingleLayout from '../../layouts/SingleLayout.astro';
-import { getNodeByURI, getAllUris } from '../../queries/api';
+import { getNodeByURI, getAllUris, blogPageQuery } from '../../queries/api';
 const uri = `/${Astro.params.uri}/`;
 const data = await getNodeByURI(uri);
 
@@ -10,11 +10,12 @@ export async function getStaticPaths() {
   return await getAllUris();
 }
 
+const allPosts = await blogPageQuery();
 const seo = node.seo;
 
 console.log(node);
 ---
 
 <SingleLayout title={node.title} description={node.excerpt}>
-  <Single post={node} />
+  <Single post={node} allPosts={allPosts} />
 </SingleLayout>

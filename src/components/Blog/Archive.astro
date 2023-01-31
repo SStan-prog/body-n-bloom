@@ -2,6 +2,12 @@
 import { Image } from '@astrojs/image/components';
 import ButtonAltSmall from '../Buttons/Button-alt-small.astro';
 const { posts } = Astro.props;
+
+const dateOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 ---
 
 <section class="section">
@@ -39,28 +45,81 @@ const { posts } = Astro.props;
         })
       }
     </div>
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <span>Recent Posts</span>
+      </div>
+      <ul class="sidebar__posts">
+        {
+          posts.map((post: any) => {
+            const date = new Date(post.date);
+            const monthNames = [
+              'January',
+              'February',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September',
+              'October',
+              'November',
+              'December',
+            ];
+
+            return (
+              <li class="sidebar__post">
+                <a href={`/blog/${post.slug}`}>
+                  <p class="sidebar__post-title">{post.title}</p>
+                  <p class=" sidebar__post-date">
+                    {monthNames[date.getMonth()]} {date.getDate()},
+                    {date.getFullYear()}
+                  </p>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </aside>
   </div>
 </section>
 
 <style lang="scss">
   .container {
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 5rem 2.5rem;
+
+    display: grid;
+    grid-template-columns: 75% auto;
+    column-gap: 7.5rem;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 65% 35%;
+      column-gap: 0;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem 5rem;
+    gap: 7.5rem 5rem;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       grid-template-columns: 1fr;
       justify-items: center;
+      margin-right: 2rem;
     }
 
     @media (max-width: 600px) {
       gap: 5rem;
+      margin-right: 0rem;
     }
   }
 
@@ -104,6 +163,72 @@ const { posts } = Astro.props;
       @media (max-width: 600px) {
         max-width: 28rem;
         height: auto;
+      }
+    }
+  }
+
+  .sidebar {
+    background-color: var(--color-white);
+
+    position: sticky;
+    top: 16rem;
+    overflow-y: scroll;
+    max-height: 60rem;
+
+    @media (max-width: 600px) {
+      margin-top: 10rem;
+
+      position: relative;
+      top: 0;
+    }
+
+    &__top {
+      background-color: var(--color-blue);
+      padding: 1rem;
+      border-radius: 10px 10px 0 0;
+      & span {
+        color: var(--color-white);
+        font-weight: bold;
+        font-family: var(--font-heading);
+        font-size: 2.4rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &__posts {
+      list-style: none;
+    }
+
+    &__post {
+      padding: 1rem;
+      cursor: pointer;
+
+      transition: background-color 0.3s ease;
+
+      & a {
+        color: var(--color-black);
+        transition: color 0.3s ease;
+      }
+
+      &:hover {
+        background-color: var(--color-blue-light);
+
+        & a {
+          color: var(--color-white);
+        }
+      }
+
+      &-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.2rem;
+      }
+
+      &-date {
+        font-size: 1.4rem;
+        font-weight: 400;
+        // color: rgb(95, 95, 95);
       }
     }
   }

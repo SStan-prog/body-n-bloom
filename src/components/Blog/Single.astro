@@ -1,7 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components';
-const { post } = Astro.props;
-console.log(post);
+const { post, allPosts } = Astro.props;
 ---
 
 <div class="container">
@@ -23,14 +22,59 @@ console.log(post);
     }
     <div class="" set:html={post.content} />
   </article>
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <span>Recent Posts</span>
+    </div>
+    <ul class="sidebar__posts">
+      {
+        allPosts.posts.nodes.map((post: any) => {
+          const date = new Date(post.date);
+          const monthNames = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+          ];
+
+          return (
+            <li class="sidebar__post">
+              <a href={`/blog/${post.slug}`}>
+                <p class="sidebar__post-title">{post.title}</p>
+                <p class=" sidebar__post-date">
+                  {monthNames[date.getMonth()]} {date.getDate()},
+                  {date.getFullYear()}
+                </p>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </aside>
 </div>
 
 <style lang="scss">
   .container {
-    max-width: 85rem;
+    max-width: 110rem;
     margin: 0 auto;
 
     padding: 10rem 2.5rem;
+
+    display: grid;
+    grid-template-columns: 75% 25%;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
 
     @media (max-width: 600px) {
       padding: 5rem 2.5rem;
@@ -38,6 +82,12 @@ console.log(post);
   }
 
   .article {
+    margin-right: 10rem;
+
+    @media (max-width: 1000px) {
+      margin-right: 0rem;
+    }
+
     & img {
       margin-bottom: 2rem;
       width: 100%;
@@ -53,6 +103,72 @@ console.log(post);
 
     @media (max-width: 600px) {
       font-size: 3rem;
+    }
+  }
+
+  .sidebar {
+    background-color: var(--color-white);
+
+    position: sticky;
+    top: 16rem;
+    overflow-y: scroll;
+    max-height: 60rem;
+
+    @media (max-width: 1000px) {
+      margin: 10rem auto 0;
+      max-width: 600px;
+
+      position: relative;
+      top: 0;
+    }
+
+    &__top {
+      background-color: var(--color-blue);
+      padding: 1rem;
+      border-radius: 10px 10px 0 0;
+      & span {
+        color: var(--color-white);
+        font-weight: bold;
+        font-family: var(--font-heading);
+        font-size: 2.4rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &__posts {
+      list-style: none;
+    }
+
+    &__post {
+      padding: 1rem;
+      cursor: pointer;
+
+      transition: background-color 0.3s ease;
+
+      & a {
+        color: var(--color-black);
+        transition: color 0.3s ease;
+      }
+
+      &:hover {
+        background-color: var(--color-blue-light);
+
+        & a {
+          color: var(--color-white);
+        }
+      }
+
+      &-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.2rem;
+      }
+
+      &-date {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
     }
   }
 </style>

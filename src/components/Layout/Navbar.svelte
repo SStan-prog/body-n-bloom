@@ -9,37 +9,6 @@
 </script>
 
 <nav class="nav">
-  <div class="nav__top">
-    <div class="nav__top-links">
-      <div class="nav__top-links-item">
-        <img src="/icons/call.svg" alt="phone number" />
-        <a href="tel:6135528504">613-552-8504</a>
-      </div>
-      <div class="nav__top-links-item">
-        <img src="/icons/mail.svg" alt="email" />
-        <a href="mailto:ilona.pap@bodynbloom.ca">ilona.pap@bodynbloom.ca</a>
-      </div>
-    </div>
-    <div class="nav__top-social">
-      <a
-        href="https://www.facebook.com/bodynbloom"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src="/icons/facebook.svg" alt="Facebook" />
-      </a>
-      <a href="https://twitter.com/bnblaser" target="_blank" rel="noreferrer">
-        <img src="/icons/twitter.svg" alt="Twitter" />
-      </a>
-      <a
-        href="https://www.instagram.com/bnblaser/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src="/icons/instagram.svg" alt="Instagram" />
-      </a>
-    </div>
-  </div>
   <div class="nav__main">
     <div class="nav__main-logo-container">
       <a href="/">
@@ -143,7 +112,11 @@
 
 <style lang="scss">
   .nav {
-    position: relative;
+    z-index: 20;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
 
     &__main {
       padding: 1rem 5rem;
@@ -156,13 +129,19 @@
 
       @media (max-width: 600px) {
         padding: 1rem 2.5rem;
+
+        grid-template-columns: 50% 50%;
       }
 
       &-logo-container {
         & img {
-          max-width: 16.3rem;
+          max-width: 14rem;
           width: 100%;
           height: auto;
+
+          @media (max-width: 600px) {
+            max-width: 12rem;
+          }
         }
       }
 

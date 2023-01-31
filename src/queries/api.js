@@ -7,6 +7,7 @@ export async function blogPageQuery() {
         posts(first: 100) {
           nodes {
             title
+            date
             excerpt
             featuredImage {
               node {
