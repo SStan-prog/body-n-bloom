@@ -1,11 +1,11 @@
 <div class="nav__top">
   <div class="nav__top-links">
     <div class="nav__top-links-item">
-      <img src="/icons/call.svg" alt="phone number" />
+      <img src="/icons/call-green.svg" alt="phone number" />
       <a href="tel:6135528504">613-552-8504</a>
     </div>
     <div class="nav__top-links-item">
-      <img src="/icons/mail.svg" alt="email" />
+      <img src="/icons/mail-green.svg" alt="email" />
       <a href="mailto:ilona.pap@bodynbloom.ca">ilona.pap@bodynbloom.ca</a>
     </div>
   </div>
@@ -40,7 +40,7 @@
 
     &__top {
       padding: 0.5rem 10rem;
-      background-color: var(--color-green-dark);
+      background-color: var(--color-green);
 
       display: flex;
       justify-content: space-between;
@@ -78,10 +78,14 @@
           }
 
           & a {
-            color: var(--color-white);
+            color: var(--color-green-dark);
             text-decoration: none;
             font-size: 1.4rem;
             margin-left: 1rem;
+
+            &:hover {
+              color: var(--color-green-dark);
+            }
           }
         }
       }

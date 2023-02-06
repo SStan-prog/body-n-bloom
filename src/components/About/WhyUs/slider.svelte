@@ -24,15 +24,7 @@
         />
       </div>
     </SwiperSlide>
-    <SwiperSlide>
-      <div class="slide">
-        <img
-          src="/images/about/about-slider-2.jpg"
-          alt="A man receiving skin treatment."
-          loading="lazy"
-        />
-      </div>
-    </SwiperSlide>
+
     <SwiperSlide>
       <div class="slide">
         <img

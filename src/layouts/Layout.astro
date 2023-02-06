@@ -4,8 +4,12 @@ import Navbar from '../components/Layout/Navbar.svelte';
 import Footer from '../components/Layout/Footer.astro';
 
 import '@fontsource/dm-serif-display';
+
 import '@fontsource/dm-sans';
 import '@fontsource/dm-sans/700.css';
+
+import '@fontsource/raleway';
+import '@fontsource/raleway/700.css';
 
 export interface Props {
   title: string;
@@ -87,14 +91,18 @@ const { title, description } = Astro.props;
     --color-blue: #4051b5;
     --color-blue-dark: #354497;
 
-    --color-green: #7dbd4a;
-    --color-green-dark: #138001;
+    --color-green: #92c567;
+    --color-green-dark: #486c28;
+
+    // Gradients
+
+    --soft-green: linear-gradient(125deg, #f7f9ef 0, #f2f4eb);
 
     //font size
-    --font-size-body: 16px;
+    --font-size-body: 1.7rem;
 
     //font family
-    --font-heading: 'DM Serif Display', serif;
+    --font-heading: 'Raleway', sans-serif;
 
     //text shadow
     --header-text-shadow: 2px 2px #2b2b2ba9;
@@ -106,7 +114,9 @@ const { title, description } = Astro.props;
   body {
     color: var(--color-black);
     font-size: var(--font-size-body);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+    font-size: 1.7rem;
     height: 100%;
   }
 
@@ -117,6 +127,7 @@ const { title, description } = Astro.props;
   h5,
   h6 {
     font-family: var(--font-heading);
+    color: var(--color-blue);
   }
 
   a {

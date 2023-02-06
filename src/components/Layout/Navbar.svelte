@@ -28,9 +28,7 @@
           <li class="nav__main-list-dropdown-item">
             <a href="/blog">Blog</a>
           </li>
-          <li class="nav__main-list-dropdown-item">
-            <a href="/referral-program">Referral Program</a>
-          </li>
+
           <li class="nav__main-list-dropdown-item">
             <a href="/contact">Contact</a>
           </li>
@@ -41,23 +39,26 @@
         <p href="#">Treatments</p>
         <ul class="nav__main-list-dropdown">
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/laser-hair-removal/">Laser hair removal</a>
+            <a href="/treatments/acne-scar-removal/">Acne Scar Removal</a>
           </li>
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/spider-veins/">Spider Veins</a>
+            <a href="/treatments/green-peel/">Green Peel</a>
           </li>
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/sun-spot-damage/">Sun spot damage</a>
+            <a href="/treatments/hydrafacial/">Hydrafacial</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/treatments/laser-hair-removal/">Laser Hair Removal</a>
           </li>
           <li class="nav__main-list-dropdown-item">
             <a href="/treatments/wrinkles-reduction/">Laser Wrinkle Treatment</a
             >
           </li>
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/nail-fungus/">Nail Fungus</a>
+            <a href="/treatments/mesotherapy/">Mesotherapy</a>
           </li>
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/green-peel/">Green Peel</a>
+            <a href="/treatments/nail-fungus/">Nail Fungus</a>
           </li>
           <li class="nav__main-list-dropdown-item">
             <a href="/treatments/platelet-rich-plasma-treatments/"
@@ -65,19 +66,17 @@
             >
           </li>
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/acne-scar-removal/">Acne Scar Removal</a>
-          </li>
-          <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/mesotherapy/">Mesotherapy</a>
+            <a href="/treatments/spider-veins/">Spider Veins</a>
           </li>
           <li class="nav__main-list-dropdown-item">
             <a href="/treatments/stretch-marks/">Stretch Marks</a>
           </li>
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/weight-loss-diet/">Weight Loss Diet</a>
+            <a href="/treatments/sun-spot-damage/">Sun Spot Damage</a>
           </li>
+
           <li class="nav__main-list-dropdown-item">
-            <a href="/treatments/hydrafacial/">Hydrafacial</a>
+            <a href="/treatments/weight-loss-diet/">Weight Loss Diet</a>
           </li>
         </ul>
       </li>
@@ -114,6 +113,8 @@
   .nav {
     z-index: 20;
     width: 100%;
+
+    box-shadow: var(--shadow-sm);
 
     position: sticky;
     top: 0;

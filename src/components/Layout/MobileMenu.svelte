@@ -23,7 +23,7 @@
           </li>
           <li><a href="/frequently-asked-questions">FAQ</a></li>
           <li><a href="/blog">Blog</a></li>
-          <li><a href="/referral-program">Referral Program</a></li>
+
           <li><a href="/contact">Contact</a></li>
         </ul>
       {/if}
@@ -32,27 +32,29 @@
       <button on:click={toggleTreatmentsMenu}>Treatments +</button>
       {#if openTreatmentsMenu}
         <ul class="nested-menu" transition:slide>
-          <li>
-            <a href="/treatments/laser-hair-removal">Laser hair removal</a>
-          </li>
-          <li><a href="/treatments/spider-veins">Spider Veins</a></li>
-          <li><a href="/treatments/sun-spot-damage">Sun spot damage</a></li>
+          <li><a href="/treatments/acne-scar-removal">Acne Scar Removal</a></li>
+          <li><a href="/treatments/green-peel">Green Peel</a></li>
+          <li><a href="/treatments/hydrafacial">Hydrafacial</a></li>
           <li>
             <a href="/treatments/wrinkles-reduction">Laser Wrinkle Treatment</a>
           </li>
+          <li>
+            <a href="/treatments/laser-hair-removal">Laser Hair Removal</a>
+          </li>
+
+          <li><a href="/treatments/mesotherapy/">Mesotherapy</a></li>
           <li><a href="/treatments/nail-fungus">Nail Fungus</a></li>
-          <li><a href="/treatments/green-peel">Green Peel</a></li>
-          <li><a href="/treatments/acne-scar-removal">Acne Scar Removal</a></li>
           <li>
             <a href="/treatments/platelet-rich-plasma-treatments"
               >Platelet Rich Plasma Treatments</a
             >
           </li>
-          <li><a href="/treatments/mesotherapy/">Mesotherapy</a></li>
+
           <li><a href="/treatments/stretch-marks/">Stretch Marks</a></li>
+          <li><a href="/treatments/spider-veins">Spider Veins</a></li>
+          <li><a href="/treatments/sun-spot-damage">Sun Spot Damage</a></li>
 
           <li><a href="/treatments/weight-loss-diet">Weight Loss Diet</a></li>
-          <li><a href="/treatments/hydrafacial">Hydrafacial</a></li>
         </ul>
       {/if}
     </li>

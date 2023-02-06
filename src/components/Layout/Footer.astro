@@ -9,15 +9,15 @@ import '../../styles/styles.scss';
         <span class="column__heading">Contact</span>
         <ul class="column__list">
           <li class="column__list-item icon-container">
-            <img src="/icons/pin.svg" alt="location" />
+            <img src="/icons/pin-black.svg" alt="location" />
             <p>2785 Baseline Rd. Suite #209 Ottawa, ON, K2H 0B7</p>
           </li>
           <li class="column__list-item icon-container">
-            <img src="/icons/mail.svg" alt="email" />
+            <img src="/icons/mail-black.svg" alt="email" />
             <a href="mailto:ilona.pap@bodynbloom.ca">ilona.pap@bodynbloom.ca</a>
           </li>
           <li class="column__list-item icon-container">
-            <img src="/icons/call.svg" alt="phone number" />
+            <img src="/icons/call-black.svg" alt="phone number" />
             <a href="tel:6135528504">613-552-8504</a>
           </li>
         </ul>
@@ -26,51 +26,56 @@ import '../../styles/styles.scss';
         <span class="column__heading">Treatments</span>
         <ul class="column__list">
           <li class="column__list-item">
-            <a href="/treatments/laser-hair-removal/"
-              >Hair Removal For All Skin Types</a
-            >
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/spider-veins">Spider Veins</a>
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/sun-spot-damage">Sun Spot Damage</a>
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/wrinkles-reduction-ottawa"
-              >Laser Wrinkle Treatment</a
-            >
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/nail-fungus">Nail Fungus</a>
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/green-peel">Green Peel</a>
-          </li>
-          <li class="column__list-item">
             <a href="/treatments/acne-scar-removal-ottawa">Acne Scar</a>
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/platelet-rich-plasma-treatments"
-              >Platelet Rich Plasma Treatments</a
-            >
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/mesotherapy">Mesotherapy</a>
-          </li>
-          <li class="column__list-item">
-            <a href="/treatments/stretch-marks">Stretch Marks</a>
           </li>
           <li class="column__list-item">
             <a href="/bridal-party-facial-packages"
               >Bridal Party Facial Packages</a
             >
           </li>
+
           <li class="column__list-item">
-            <a href="/treatments/weight-loss-diet">Weight Loss Diet</a>
+            <a href="/treatments/green-peel">Green Peel</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/treatments/laser-hair-removal/"
+              >Hair Removal For All Skin Types</a
+            >
           </li>
           <li class="column__list-item">
             <a href="/treatments/hydrafacial">Hydrafacial</a>
+          </li>
+
+          <li class="column__list-item">
+            <a href="/treatments/wrinkles-reduction-ottawa"
+              >Laser Wrinkle Treatment</a
+            >
+          </li>
+          <li class="column__list-item">
+            <a href="/treatments/mesotherapy">Mesotherapy</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/treatments/nail-fungus">Nail Fungus</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/treatments/platelet-rich-plasma-treatments"
+              >Platelet Rich Plasma Treatments</a
+            >
+          </li>
+
+          <li class="column__list-item">
+            <a href="/treatments/spider-veins">Spider Veins</a>
+          </li>
+
+          <li class="column__list-item">
+            <a href="/treatments/stretch-marks">Stretch Marks</a>
+          </li>
+          <li class="column__list-item">
+            <a href="/treatments/sun-spot-damage">Sun Spot Damage</a>
+          </li>
+
+          <li class="column__list-item">
+            <a href="/treatments/weight-loss-diet">Weight Loss Diet</a>
           </li>
         </ul>
       </div>
@@ -89,9 +94,7 @@ import '../../styles/styles.scss';
           <li class="column__list-item">
             <a href="/frequently-asked-questions">FAQs</a>
           </li>
-          <li class="column__list-item">
-            <a href="/referral-program">Referral Program</a>
-          </li>
+
           <li class="column__list-item">
             <a href="/pricing">Pricing</a>
           </li>
@@ -127,7 +130,7 @@ import '../../styles/styles.scss';
 
 <style lang="scss">
   .footer {
-    background-color: #2d2c2c;
+    background-color: var(--color-green);
   }
 
   .container {
@@ -169,7 +172,7 @@ import '../../styles/styles.scss';
       font-family: var(--font-heading);
       text-transform: uppercase;
       font-weight: bold;
-
+      color: #121212;
       font-size: 2rem;
     }
 
@@ -181,15 +184,17 @@ import '../../styles/styles.scss';
 
       &-item {
         margin: 1rem 0;
+        color: #121212;
+        font-weight: 700;
       }
 
       a {
-        color: var(--color-white);
+        color: #121212;
         text-decoration: none;
         transition: color 0.3s ease;
 
         &:hover {
-          color: var(--color-off-white);
+          color: #121212;
         }
       }
     }
