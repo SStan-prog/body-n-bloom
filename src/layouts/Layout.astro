@@ -29,7 +29,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <title>{title} | Body 'N' Bloom</title>
   </head>
-  <body style="background: url('/images/body-bg.jpeg') repeat;">
+  <body>
     <div class="white-wrapper">
       <NavTop />
       <Navbar client:load />
@@ -58,13 +58,7 @@ const { title, description } = Astro.props;
   body {
     line-height: 1.5;
 
-    background-attachment: fixed !important;
-
     position: relative;
-  }
-
-  .white-wrapper {
-    background: rgba(255, 255, 255, 0.69);
   }
 
   // .body-wrapper {
@@ -88,18 +82,27 @@ const { title, description } = Astro.props;
     --color-light-grey: #fcfcfc;
 
     --color-blue-light: #7c8bda;
-    --color-blue: #4051b5;
+    --color-blue: hsl(231, 48%, 48%);
     --color-blue-dark: #354497;
 
-    --color-green: #92c567;
+    --color-green: hsl(93, 45%, 59%);
     --color-green-dark: #486c28;
 
     // Gradients
 
-    --soft-green: linear-gradient(125deg, #f7f9ef 0, #f2f4eb);
+    --soft-green: linear-gradient(
+      125deg,
+      hsl(93, 45%, 96%) 0,
+      hsl(93, 29%, 94%)
+    );
+    --soft-blue: linear-gradient(
+      270deg,
+      hsl(231, 57%, 95%) 0,
+      hsl(231, 33%, 97%)
+    );
 
     //font size
-    --font-size-body: 1.7rem;
+    --font-size-body: 1.8rem;
 
     //font family
     --font-heading: 'Raleway', sans-serif;
@@ -116,7 +119,7 @@ const { title, description } = Astro.props;
     font-size: var(--font-size-body);
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     height: 100%;
   }
 

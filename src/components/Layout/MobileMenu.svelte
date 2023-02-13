@@ -23,7 +23,7 @@
           </li>
           <li><a href="/frequently-asked-questions">FAQ</a></li>
           <li><a href="/blog">Blog</a></li>
-
+          <li><a href="/cancellation-policy">Cancellation Policy</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       {/if}
@@ -46,7 +46,7 @@
           <li><a href="/treatments/nail-fungus">Nail Fungus</a></li>
           <li>
             <a href="/treatments/platelet-rich-plasma-treatments"
-              >Platelet Rich Plasma Treatments</a
+              >Platelet-Rich Plasma Treatments</a
             >
           </li>
 
@@ -118,6 +118,7 @@
         font-size: 1.6rem;
         color: var(--color-grey);
         font-weight: bold;
+        font-size: 1.8rem;
       }
     }
   }

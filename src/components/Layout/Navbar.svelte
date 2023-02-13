@@ -1,7 +1,6 @@
 <script>
   import MobileMenu from './MobileMenu.svelte';
 
-  import { slide } from 'svelte/transition';
   let openMenu = false;
   const toggle = () => {
     openMenu = !openMenu;
@@ -27,6 +26,9 @@
           </li>
           <li class="nav__main-list-dropdown-item">
             <a href="/blog">Blog</a>
+          </li>
+          <li class="nav__main-list-dropdown-item">
+            <a href="/cancellation-policy">Cancellation Policy</a>
           </li>
 
           <li class="nav__main-list-dropdown-item">
@@ -62,7 +64,7 @@
           </li>
           <li class="nav__main-list-dropdown-item">
             <a href="/treatments/platelet-rich-plasma-treatments/"
-              >Platelet Rich Plasma Treatments</a
+              >Platelet-Rich Plasma Treatments</a
             >
           </li>
           <li class="nav__main-list-dropdown-item">
@@ -121,8 +123,7 @@
 
     &__main {
       padding: 1rem 5rem;
-      background-color: var(--color-white);
-
+      background: var(--color-white);
       display: grid;
       width: 100%;
       grid-template-columns: 30% 70%;
@@ -184,7 +185,7 @@
           display: none;
 
           list-style: none;
-          background-color: var(--color-light-grey);
+          background-image: var(--soft-blue);
 
           padding: 1rem;
           box-shadow: var(--shadow-sm);

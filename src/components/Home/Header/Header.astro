@@ -6,4 +6,49 @@ import Slider from './Slider.svelte';
   <div class="container">
     <Slider client:idle />
   </div>
+  <div class="">
+    <div class="reviews">
+      <a
+        href="https://www.google.com/search?q=bodynbloom+ottawa&oq=bodynbloom+ottawa&aqs=chrome..69i57j0i13i30j69i60l3.8685j0j7&sourceid=chrome&ie=UTF-8#lrd=0x4cce00ca7b47aba7:0x5bb2c273fc4a4794,1,,,,"
+        target="_blank"
+      >
+        <p>Over 150+ 5 Star Customer Reviews on Google</p>
+        <div class="reviews__stars">
+          <img src="/icons/star.svg" alt="star icon" />
+          <img src="/icons/star.svg" alt="star icon" />
+          <img src="/icons/star.svg" alt="star icon" />
+          <img src="/icons/star.svg" alt="star icon" />
+          <img src="/icons/star.svg" alt="star icon" />
+        </div>
+      </a>
+    </div>
+  </div>
 </header>
+
+<style lang="scss">
+  .reviews {
+    margin-bottom: 3rem;
+    padding: 5rem;
+    background-image: var(--soft-blue);
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & p {
+      font-size: 2rem;
+      text-align: center;
+      color: var(--color-blue);
+
+      margin-bottom: 1rem;
+    }
+
+    &__stars {
+      & img {
+        width: 4rem;
+      }
+    }
+  }
+</style>
