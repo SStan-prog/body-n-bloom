@@ -10,12 +10,12 @@ import Button from '../../Buttons/Button.astro';
         <h2 class="heading">Mesotherapy Ottawa</h2>
         <p>
           No matter what we tell ourselves, it’s true – the stresses of everyday
-          life and the effects of the elements do have an affect on our skin and
-          advance the signs of aging. But there’s no need to worry – with
-          Mesotherapy we can reverse those signs!
+          life and the effects of the elements do have an effect on our skin and
+          advance the signs of aging. But there’s no need to worry – we can
+          reverse those signs with Mesotherapy!
         </p>
         <p>
-          By using micro needles, we inject a minuscule amount of naturally
+          By using microneedles, we inject a minuscule amount of naturally
           occurring extracts into the skin, helping to correct underlying issues
           (like dehydration and poor circulation) that cause signs of aging,
           like wrinkles, dull complexions, and even hair loss.
@@ -23,7 +23,7 @@ import Button from '../../Buttons/Button.astro';
 
         <p>
           <strong>What Improvements will I see with Mesotherapy?</strong><br
-          />Mesotherapy will deliver a number of improvements, including:
+          />Mesotherapy delivers a number of improvements, including:
         </p>
         <ul>
           <li>Tightened skin;</li>
@@ -50,7 +50,11 @@ import Button from '../../Buttons/Button.astro';
         />
       </div>
     </div>
+  </div>
+</section>
 
+<section class="blue-bg">
+  <div class="container">
     <div class="columns">
       <div class="column wide">
         <h3>Mesotherapy for Hair Loss</h3>
@@ -93,17 +97,22 @@ import Button from '../../Buttons/Button.astro';
         <p><strong>After treatment</strong></p>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
     <div class="columns">
       <div class="column wide">
         <h3>How Does Mesotherapy Work?</h3>
 
         <p>
           At Body ‘N’ Bloom, our Mesotherapy treatments infuse micronutrients
-          into the skin using a micro needling technique. We only use products
-          by PLURYAL, by MD Skin Solutions Laboratories based in Luxembourg to
-          ensure our process and treatment is of the highest quality. The
+          into the skin using a micro-needling technique. We only use products
+          by PLURYAL, by MD Skin Solutions Laboratories based in Luxembourg, to
+          ensure our process and treatment are of the highest quality. The
           European market is more highly regulated than that in North America,
-          and MD Skin Solutions is a European ISO certified laboratory
+          and MD Skin Solutions is a European ISO-certified laboratory
           specialized in developing anti-aging treatments and solutions.
         </p>
 
@@ -114,15 +123,14 @@ import Button from '../../Buttons/Button.astro';
         </p>
         <p>Pluryal mesoline SHINE to address complexion and blemishes</p>
         <p>
-          Pluryal mesoline ANTIOX to address aggressed and photo damaged skin
+          Pluryal mesoline ANTIOX to address aggressed and photo-damaged skin
         </p>
-        <p>Pluryal mesoline CLEAR to address acne prone skin</p>
-        <p>Pluryal mesoline HAIR to address hair-loss in men and women.</p>
+        <p>Pluryal mesoline CLEAR to address acne-prone skin</p>
+        <p>Pluryal mesoline HAIR to address hair loss in men and women.</p>
         <p>
           Each of these products uses a different combination of micronutrients
           to achieve the desired results.
         </p>
-        <Button text="Book now" href="https://bodynbloom.janeapp.com/" blank />
       </div>
     </div>
     <div class="columns">
@@ -133,6 +141,13 @@ import Button from '../../Buttons/Button.astro';
           about mesotherapy, the Pluryal line of products, or would like to book
           an appointment, <a href="/contact">contact us today</a>.
         </p>
+        <div class="btn">
+          <Button
+            text="Book now"
+            href="https://bodynbloom.janeapp.com/"
+            blank
+          />
+        </div>
       </div>
       <div class="column">
         <Image
@@ -148,127 +163,135 @@ import Button from '../../Buttons/Button.astro';
       </div>
     </div>
   </div>
+</section>
 
-  <style lang="scss">
-    .container {
-      padding: 10rem 10rem 5rem;
-      max-width: 120rem;
-      margin: 0 auto;
+<style lang="scss">
+  .btn {
+    margin: 5rem 0;
+  }
+
+  .blue-bg {
+    background-image: var(--soft-blue);
+  }
+
+  .container {
+    padding: 5rem 10rem;
+    max-width: 140rem;
+    margin: 0 auto;
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      padding: 5rem;
+    }
+
+    @media (max-width: 400px) {
+      padding: 5rem 2rem;
+    }
+
+    & h2 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    & h3 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-align: left;
+      width: 100%;
+
+      @media (max-width: 600px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    & img {
+      margin-bottom: 2rem;
+      width: 100%;
+      height: auto;
+    }
+
+    & p {
+      margin-bottom: 1rem;
+    }
+
+    & ul {
+      margin-left: 1rem;
+      margin-bottom: 2rem;
+
+      & li {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    margin-top: 5rem;
+
+    margin-bottom: 2.5rem;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+
+    &.short {
+      max-width: 80rem;
+
+      & img {
+        max-width: 30rem;
+      }
+    }
+  }
+
+  .column {
+    & img {
+      width: 100%;
+      height: auto;
+    }
+
+    &.row-2 {
+      @media (max-width: 800px) {
+        grid-row: 2;
+      }
+    }
+
+    &.wide {
+      grid-column: 1 / 3;
 
       display: flex;
-      width: 100%;
       flex-direction: column;
       align-items: center;
 
-      @media (max-width: 900px) {
-        padding: 5rem;
-      }
-
-      @media (max-width: 400px) {
-        padding: 5rem 2rem;
-      }
-
-      & h2 {
-        font-size: 4rem;
-        margin-bottom: 1rem;
-
-        @media (max-width: 600px) {
-          font-size: 3rem;
-        }
-      }
-
-      & h3 {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        text-align: left;
-        width: 100%;
-
-        @media (max-width: 600px) {
-          font-size: 2.4rem;
-        }
-      }
-
-      & img {
-        margin-bottom: 2rem;
-        width: 100%;
-        height: auto;
-      }
+      text-align: left;
 
       & p {
-        margin-bottom: 1rem;
+        width: 100%;
       }
-
-      & ul {
-        margin-left: 1rem;
-        margin-bottom: 2rem;
-
-        & li {
-          margin: 1rem 0;
-        }
-      }
-    }
-
-    .columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-
-      margin-top: 5rem;
-
-      margin-bottom: 2.5rem;
 
       @media (max-width: 800px) {
-        grid-template-columns: 1fr;
-      }
-
-      &.short {
-        max-width: 80rem;
-
-        & img {
-          max-width: 30rem;
-        }
+        grid-column: 1 / 2;
       }
     }
 
-    .column {
-      & img {
-        width: 100%;
-        height: auto;
-      }
-
-      &.row-2 {
-        @media (max-width: 800px) {
-          grid-row: 2;
-        }
-      }
-
-      &.wide {
-        grid-column: 1 / 3;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        text-align: left;
-
-        & p {
-          width: 100%;
-        }
-
-        @media (max-width: 800px) {
-          grid-column: 1 / 2;
-        }
-      }
-
-      & iframe {
-        width: 100%;
-        aspect-ratio: 16/9;
-        margin-bottom: 5rem;
-      }
-
-      & p {
-        margin-bottom: 2rem;
-      }
+    & iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      margin-bottom: 5rem;
     }
-  </style>
-</section>
+
+    & p {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

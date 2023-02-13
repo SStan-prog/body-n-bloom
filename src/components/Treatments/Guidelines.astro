@@ -5,15 +5,15 @@ const { heading, preTreatment, postTreatment } = Astro.props;
 
 <section class="section">
   <div class="container">
-    <div class="heading">
-      <h2>{heading}</h2>
-      <div class="heading__accent">
-        <div class="heading__accent-line"></div>
-        <img src="/icons/leaf.svg" alt="leaf" />
-        <div class="heading__accent-line"></div>
-      </div>
-    </div>
     <div class="guidelines">
+      <div class="heading">
+        <h2>{heading}</h2>
+        <div class="heading__accent">
+          <div class="heading__accent-line"></div>
+          <img src="/icons/leaf.svg" alt="leaf" />
+          <div class="heading__accent-line"></div>
+        </div>
+      </div>
       <div class="guidelines__columns">
         <div class="guidelines__column">
           <div class="guidelines__heading">Pre-treatment</div>
@@ -85,7 +85,7 @@ const { heading, preTreatment, postTreatment } = Astro.props;
       border-radius: 1rem;
       padding: 2rem 4rem;
 
-      background-color: var(--color-white);
+      background-image: var(--soft-blue);
 
       display: flex;
       flex-direction: column;
@@ -111,7 +111,7 @@ const { heading, preTreatment, postTreatment } = Astro.props;
       }
 
       &__list {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
 
       &__cta {

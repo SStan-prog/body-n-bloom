@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Common/Header.astro';
 import Main from '../../components/Treatments/MainWithSlider/Main.astro';
+import NewMain from '../../components/Treatments/Weightloss/Main.astro';
 import Guidelines from '../../components/Treatments/Guidelines.astro';
 
 import slider1 from '../../../public/images/treatments/weight-loss-diet/slider-1.jpeg';
@@ -25,100 +26,30 @@ let altText = 'A photo of heathly food and supplements.';
     heading="Weight Loss Diet"
     bg="images/treatments/weight-loss-diet/weight-loss-diet-header.jpg"
   />
-  <Main images={images} altText={altText}>
-    <div slot="text">
-      <div class="text-container">
-        <h2>Metabolic Balance Weight Loss Diet Ottawa</h2>
-        <p>
-          The <a
-            href="https://ca.metabolic-balance.com/"
-            target="_blank"
-            rel="noreferrer">Metabolic Balance® weight loss program</a
-          > is an innovative all-natural nutrition program that brings balance to
-          hormones, optimizes health for many health conditions such as high blood
-          pressure and cholesterol, helps with Diabetes 2, with allergies, etc. This
-          program leads to a new invigorating lifestyle resulting in successful long-term
-          weight management. It is backed by over 25 years of scientific research
-          and is managed by dedicated physicians and nutritional scientists.
-        </p>
 
-        <p>
-          <strong>How the Metabolic Balance® Weight Loss Diet Works</strong><br
-          />
-        </p>
-
-        <p>
-          Metabolic Balance was developed from the knowledge that our daily food
-          has an enormous influence on the body.
-        </p>
-
-        <p>
-          Before making any nutritional recommendations, Metabolic Balance®
-          requires a complete bio-chemistry (blood test) and health profile
-          analysis. The personalized nutrition plan directs clients to supply
-          their body with all the vital and healthy nutrients they need. Food is
-          NOT selected according to calorie content or by percentage of fat,
-          protein or carbohydrates. The criteria for food selection is based on
-          the effect of specific foods on hormones and missing nutrients in the
-          body. EVERY meal plan is individually tailored to the client needs.
-        </p>
-
-        <p>
-          There are no prescribed injections, pills, shakes, or proprietary
-          foods. Nor are users required to keep “points” or count calories.
-          Through this method healthy and naturally balanced insulin production
-          is promoted. Insulin is the “internal key” to the body’s weight
-          management system and has a substantial effect on other hormonal and
-          enzyme production.
-        </p>
-
-        <p>
-          At Metabolic Balance, we believe that adequate food for the body
-          should be as natural as possible. The more food has been processed and
-          the more additives have been added to it, the more likely it will
-          negatively affect the body. This is why Metabolic Balance recommends
-          local, natural and organic foods that are as fresh as possible.
-        </p>
-        <p>
-          Source: <a
-            href="https://www.metabolic-balance.ca/en-ca/The-program"
-            target="_blank"
-            rel="noreferrer">metabolic-balance.ca</a
-          >
-        </p>
-        <p>
-          To learn more about the Metabolic Balance® weight loss diet, please
-          call <a href="tel:6135528504">613-552-8504</a> or <a
-            href="https://bodynbloom.janeapp.com/"
-            target="_blank"
-            rel="noreferrer">book an appointment online</a
-          >.
-        </p>
-      </div>
-    </div>
-  </Main>
-
-  <style lang="scss">
-    li {
-      margin: 1rem 0rem 1rem 2rem;
-    }
-
-    ul {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-
-      @media (max-width: 600px) {
-        font-size: 3rem;
-      }
-    }
-
-    p {
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
-  </style>
+  <NewMain />
 </Layout>
+
+<style lang="scss">
+  li {
+    margin: 1rem 0rem 1rem 2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+</style>
